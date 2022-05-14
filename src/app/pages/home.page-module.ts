@@ -6,32 +6,25 @@ import { NavbarComponentModule } from '../../../projects/navbar/src/lib/adapters
 import { FirebaseProductServiceModule, ProductListComponentModule } from '@product';
 import { HeroComponentModule } from '@hero';
 import { FirebaseHeroServiceModule } from '@hero';
+
+
 @NgModule({
   imports: [
     CommonModule, HeroComponentModule,
-import {
-    FirebaseProductServiceModule,
+
+    RouterModule.forChild([
+      {
+        path: '',
+        component: HomePage,
+      },
+    ]),
+    NavbarComponentModule,
     ProductListComponentModule,
-  } from '@product';
-  import { ProductDetailComponentModule } from '@product';
-
-@NgModule({
-    imports: [
-      CommonModule,
-
-      RouterModule.forChild([
-        {
-          path: '',
-          component: HomePage,
-        },
-      ]),
-      NavbarComponentModule,
-      ProductListComponentModule,
-      FirebaseProductServiceModule, FirebaseHeroServiceModule,
-      FirebaseProductServiceModule,
-    ],
-    declarations: [HomePage],
-    providers: [],
-    exports: [],
-  })
+    FirebaseProductServiceModule, FirebaseHeroServiceModule,
+    FirebaseProductServiceModule,
+  ],
+  declarations: [HomePage],
+  providers: [],
+  exports: [],
+})
 export class HomePageModule { }
