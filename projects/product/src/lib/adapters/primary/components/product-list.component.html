@@ -1,17 +1,16 @@
-<ul>
-  <li *ngFor="let item of products$ | async">
-    {{ item.name }}
-    <div class="row">
-      <div class="col">
-        <img
-          src="{{ item.imageUrl }}"
-          width="300"
-          height="400"
-          class="img-fluid"
-        />
-        {{ item.price }}
-        {{ item.description }}
-      </div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <li *ngFor="let item of products$ | async">
+        <div class="card" style="width: 18rem">
+          <img src="{{ item.imageUrl }}" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">{{ item.name }}</h5>
+            <p class="card-text">{{ item.description }} {{ item.price }}</p>
+            <a href="#" class="btn btn-primary">Kup</a>
+          </div>
+        </div>
+      </li>
     </div>
-  </li>
-</ul>
+  </div>
+</div>
