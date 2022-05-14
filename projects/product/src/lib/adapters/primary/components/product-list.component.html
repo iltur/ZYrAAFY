@@ -1,7 +1,17 @@
 <ul>
   <li *ngFor="let item of products$ | async">
-    {{ item | json }}
-
-    ((item))
+    {{ item.name }}
+    <div class="row">
+      <div class="col">
+        <img
+          src="{{ item.imageUrl }}"
+          width="300"
+          height="400"
+          class="img-fluid"
+        />
+        {{ item.price }}
+        {{ item.description }}
+      </div>
+    </div>
   </li>
 </ul>
