@@ -9,18 +9,29 @@ import { FirebaseHeroServiceModule } from '@hero';
 @NgModule({
   imports: [
     CommonModule, HeroComponentModule,
-    RouterModule.forChild([
-      {
-        path: '',
-        component: HomePage,
-      },
-    ]),
-    NavbarComponentModule,
+import {
+    FirebaseProductServiceModule,
     ProductListComponentModule,
-    FirebaseProductServiceModule, FirebaseHeroServiceModule,
-  ],
-  declarations: [HomePage],
-  providers: [],
-  exports: [],
-})
+  } from '@product';
+  import { ProductDetailComponentModule } from '@product';
+
+@NgModule({
+    imports: [
+      CommonModule,
+
+      RouterModule.forChild([
+        {
+          path: '',
+          component: HomePage,
+        },
+      ]),
+      NavbarComponentModule,
+      ProductListComponentModule,
+      FirebaseProductServiceModule, FirebaseHeroServiceModule,
+      FirebaseProductServiceModule,
+    ],
+    declarations: [HomePage],
+    providers: [],
+    exports: [],
+  })
 export class HomePageModule { }

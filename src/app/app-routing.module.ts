@@ -19,7 +19,7 @@ const routes: Routes = [{
   loadChildren: () => ContactusPageModule
 },
 {
-  path: 'details',
+  path: 'details/:productId',
   loadChildren: () => ProductdetailPageModule
 },
 {
