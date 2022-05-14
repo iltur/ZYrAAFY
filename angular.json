@@ -103,6 +103,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "HACKATON:build:production",
+            "firebaseProject": "hakaton-2939c",
+            "firebaseHostingSite": "hakaton-2939c"
+          }
         }
       }
     }

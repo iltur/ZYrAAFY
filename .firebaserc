@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "hakaton-2939c": {
+      "hosting": {
+        "HACKATON": [
+          "hakaton-2939c"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "hakaton-2939c"
+  }
+}
