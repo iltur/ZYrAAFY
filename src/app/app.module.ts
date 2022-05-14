@@ -3,13 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { FirebaseAppModule, initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { provideFirestore, getFirestore, FirestoreModule } from '@angular/fire/firestore';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ActivatedRoute } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { NavbarComponentModule } from '@navbar';
+import { AngularFireModule } from '@angular/fire/compat';
 
 @NgModule({
   declarations: [
@@ -20,8 +21,9 @@ import { NavbarComponentModule } from '@navbar';
     RouterModule,
     AppRoutingModule,
     NavbarComponentModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFirestore(() => getFirestore()),
+    FirestoreModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    // provideFirebaseApp(() => initializeApp(environment.firebase)),
     BrowserAnimationsModule,
   ],
 
