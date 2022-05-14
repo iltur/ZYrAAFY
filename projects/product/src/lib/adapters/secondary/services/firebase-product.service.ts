@@ -12,10 +12,10 @@ export class FirebaseProductService implements GetsAllProductDtoPort, GetsOnePro
   }
 
   getAll(): Observable<ProductDTO[]> {
-    return this._client.collection<ProductDTO>('products').valueChanges(({idField: 'id'}));
+    return this._client.collection<ProductDTO>('products').valueChanges(({ idField: 'id' }));
   }
 
-  getOne(id: string): Observable<ProductDTO | undefined> {
-    return this._client.doc<ProductDTO>('products/'+id).valueChanges({idField: 'id'}).pipe(switchMap((item) => (item ? of(item) : throwError(new Error('Item does not exist in firebase')))));
+  getOne(id: string): Observable<ProductDTO> {
+    return this._client.doc<ProductDTO>('products/' + id).valueChanges({ idField: 'id' }).pipe(switchMap((item) => (item ? of(item) : throwError(new Error('Item does not exist in firebase')))));
   }
 }
