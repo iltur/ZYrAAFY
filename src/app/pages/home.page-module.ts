@@ -4,10 +4,11 @@ import { RouterModule } from '@angular/router';
 import { HomePage } from './home.page';
 import { NavbarComponentModule } from '../../../projects/navbar/src/lib/adapters/primary/ui/navbar.component-module';
 import { FirebaseProductServiceModule, ProductListComponentModule } from '@product';
-
+import { HeroComponentModule } from '@hero';
+import { FirebaseHeroServiceModule } from '@hero';
 @NgModule({
   imports: [
-    CommonModule,
+    CommonModule, HeroComponentModule,
     RouterModule.forChild([
       {
         path: '',
@@ -16,7 +17,7 @@ import { FirebaseProductServiceModule, ProductListComponentModule } from '@produ
     ]),
     NavbarComponentModule,
     ProductListComponentModule,
-    FirebaseProductServiceModule
+    FirebaseProductServiceModule, FirebaseHeroServiceModule,
   ],
   declarations: [HomePage],
   providers: [],

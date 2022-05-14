@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { NavbarComponentModule } from '@navbar';
 import { AngularFireModule } from '@angular/fire/compat';
 import { FirebaseMessagesServiceModule } from '@contactus';
+import { FirebaseHeroServiceModule } from '@hero';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { FirebaseMessagesServiceModule } from '@contactus';
     AppRoutingModule,
     NavbarComponentModule,
     FirestoreModule,
+    FirebaseHeroServiceModule,
     AngularFireModule.initializeApp(environment.firebase),
     // provideFirebaseApp(() => initializeApp(environment.firebase)),
     BrowserAnimationsModule,
