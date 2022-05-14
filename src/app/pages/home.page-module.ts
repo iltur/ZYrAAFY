@@ -3,11 +3,16 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HomePage } from './home.page';
 import { NavbarComponentModule } from '../../../projects/navbar/src/lib/adapters/primary/ui/navbar.component-module';
-import { FirebaseProductServiceModule, ProductListComponentModule } from '@product';
+import {
+  FirebaseProductServiceModule,
+  ProductListComponentModule,
+} from '@product';
+import { ProductDetailComponentModule } from '@product';
 
 @NgModule({
   imports: [
     CommonModule,
+
     RouterModule.forChild([
       {
         path: '',
@@ -16,10 +21,10 @@ import { FirebaseProductServiceModule, ProductListComponentModule } from '@produ
     ]),
     NavbarComponentModule,
     ProductListComponentModule,
-    FirebaseProductServiceModule
+    FirebaseProductServiceModule,
   ],
   declarations: [HomePage],
   providers: [],
   exports: [],
 })
-export class HomePageModule { }
+export class HomePageModule {}
