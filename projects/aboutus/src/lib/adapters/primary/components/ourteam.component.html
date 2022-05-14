@@ -4,12 +4,7 @@
   <div class="row">
     <div class="col" align="justify" *ngFor="let item of team$ | async">
       <div class="card" style="width: 12rem">
-        <img
-          [src]="item.imageUrl"
-          width="400"
-          height="210"
-          class="card-img-top"
-        />
+        <img [src]="item.imageUrl" class="card-img-top" />
         <div class="card-body">
           <h3 class="card-title fw-bold">{{ item.name }}<br /></h3>
           <h4 class="card-title fw-bold">{{ item.description }}<br /></h4>
