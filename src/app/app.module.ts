@@ -11,6 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { NavbarComponentModule } from '@navbar';
 import { AngularFireModule } from '@angular/fire/compat';
+import { FirebaseMessagesServiceModule } from '@contactus';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AngularFireModule } from '@angular/fire/compat';
   imports: [
     BrowserModule,
     RouterModule,
+    FirebaseMessagesServiceModule,
     AppRoutingModule,
     NavbarComponentModule,
     FirestoreModule,

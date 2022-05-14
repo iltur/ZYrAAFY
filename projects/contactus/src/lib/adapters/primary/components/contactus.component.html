@@ -1,4 +1,4 @@
-<form [formGroup]="contact">
+<form [formGroup]="contact" (ngSubmit)="onMessageSubmited(contact)">
   <input type="text" formControlName="name" placeholder="Name" /><input
     type="text"
     formControlName="email"
