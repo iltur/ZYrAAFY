@@ -1,1 +1,12 @@
-{{productDetail$ | async | json}}
+<div *ngIf=" productDetail$ | async as productDetail">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{productDetail.name}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{productDetail.description}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">{{productDetail.price}} zł</h6>
+            <img [src]="productDetail.imageUrl" width="100" height="200">
+            <a href="#" class="card-link">Dodaj do koszyka</a>
+
+        </div>
+    </div>
+</div>
