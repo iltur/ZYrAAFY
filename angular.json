@@ -151,6 +151,33 @@
           }
         }
       }
+    },
+    "hero": {
+      "projectType": "library",
+      "root": "projects/hero",
+      "sourceRoot": "projects/hero/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": { "project": "projects/hero/ng-package.json" },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/hero/tsconfig.lib.prod.json"
+            },
+            "development": { "tsConfig": "projects/hero/tsconfig.lib.json" }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/hero"],
+          "options": {
+            "jestConfig": "projects/hero/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "defaultProject": "HACKATON"
