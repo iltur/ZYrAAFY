@@ -122,6 +122,35 @@
           }
         }
       }
+    },
+    "contactus": {
+      "projectType": "library",
+      "root": "projects/contactus",
+      "sourceRoot": "projects/contactus/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": { "project": "projects/contactus/ng-package.json" },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/contactus/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/contactus/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/contactus"],
+          "options": {
+            "jestConfig": "projects/contactus/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "defaultProject": "HACKATON"
