@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { ProductdetailPage } from './productdetail.page';
 import { FirebaseProductServiceModule, InMemoryProductStorageModule, ProductDetailComponentModule, ProductResolver, ProductResolverModule } from '@product';
+import { GobackComponentModule } from '@goback';
+import { ProductdetailPage } from './productdetail.page';
 
 @NgModule({
   imports: [CommonModule, ProductDetailComponentModule, FirebaseProductServiceModule, InMemoryProductStorageModule, ProductResolverModule,
@@ -12,7 +13,7 @@ import { FirebaseProductServiceModule, InMemoryProductStorageModule, ProductDeta
         component: ProductdetailPage,
         resolve: [ProductResolver]
       }
-    ])],
+    ]), GobackComponentModule],
   declarations: [ProductdetailPage],
   providers: [],
   exports: []

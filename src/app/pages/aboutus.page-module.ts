@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { FirebaseOurteamServiceModule, OurteamComponentModule } from '@aboutus';
+import { GobackComponentModule } from '@goback';
 import { AboutusPage } from './aboutus.page';
-import { OurteamComponentModule } from '@aboutus';
-import { FirebaseOurteamServiceModule } from '@aboutus';
 
 @NgModule({
-  imports: [CommonModule, OurteamComponentModule,
+  imports: [CommonModule, OurteamComponentModule, GobackComponentModule,
     RouterModule.forChild([
       {
         path: '',
         component: AboutusPage,
       }
     ]),
-    FirebaseOurteamServiceModule,],
+    FirebaseOurteamServiceModule, GobackComponentModule, OurteamComponentModule,],
   declarations: [AboutusPage],
   providers: [],
   exports: []

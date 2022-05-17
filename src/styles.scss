@@ -6,6 +6,9 @@
 /* Importing Datepicker SCSS file. */
 @import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
 
+.background {
+   background-color: #B0C4DE;
+}
 
 .scbackground {
    height: 650px;
@@ -33,10 +36,20 @@
    text-align: center;
    border: none;
    border-radius: 12 px;
+
    
 }
 
+.photo{
+   max-width: 65%;
+   height: auto;
+   align-items: center;
+}
 
+.containertext {
+   text-align: justify;
+   color: white;
+}
 
 
 
