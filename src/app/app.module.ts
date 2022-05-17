@@ -6,7 +6,6 @@ import { environment } from '../environments/environment';
 import { FirestoreModule } from '@angular/fire/firestore';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
-import { NavbarComponentModule } from '@navbar';
 import { AngularFireModule } from '@angular/fire/compat';
 import { FirebaseMessagesServiceModule } from '@contactus';
 import { FirebaseHeroServiceModule } from '@hero';
@@ -21,7 +20,6 @@ import { ButtonComponentModule } from '@navigation';
     RouterModule,
     FirebaseMessagesServiceModule,
     AppRoutingModule,
-    NavbarComponentModule,
     ButtonComponentModule,
     FirestoreModule,
     FirebaseHeroServiceModule,
