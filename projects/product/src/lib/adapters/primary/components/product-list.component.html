@@ -1,10 +1,11 @@
+<p class="border bg-light w-100"></p>
 <div class="col herotext">
   <h1>
     <span class="fw-bold"> DISCOVER OUR PRODUCTS</span>
   </h1>
-  <h4>THE LATEST FASHION OLNY</h4>
-  <br />
+  <h4>THE LATEST FASHION ONLY</h4>
 </div>
+<p class="border bg-light w-100"></p>
 
 <div class="container">
   <div class="row">
@@ -13,13 +14,11 @@
         <img
           [routerLink]="'details/' + item.id"
           src="{{ item.imageUrl }}"
-          class="card-img-top background"
+          class="card-img-top background productimgs"
         />
         <div class="card-body">
           <h5 class="card-title navtext fw-bold">{{ item.name }}</h5>
-          <p class="card-text navtext">
-            {{ item.description }} {{ item.price }}
-          </p>
+          <p class="card-text navtext">{{ item.price }} zł</p>
 
           <button
             [routerLink]="'./confirmation'"

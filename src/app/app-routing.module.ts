@@ -5,6 +5,7 @@ import { AboutusPageModule } from './pages/aboutus.page-module';
 import { ContactusPageModule } from './pages/contactus.page-module';
 import { ProductdetailPageModule } from './pages/productdetail.page-module';
 import { ConfirmationPageModule } from './pages/confirmation.page-module';
+import { CartPageModule } from './pages/cart.page-module';
 
 const routes: Routes = [{
   path: 'home',
@@ -29,6 +30,10 @@ const routes: Routes = [{
 {
   path: '',
   loadChildren: () => HomePageModule
+},
+{
+  path: 'shoppingcart',
+  loadChildren: () => CartPageModule
 }
 ];
 
