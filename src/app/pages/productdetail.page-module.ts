@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FirebaseProductServiceModule, InMemoryProductStorageModule, ProductDetailComponentModule, ProductResolver, ProductResolverModule } from '@product';
-import { GobackComponentModule } from '@goback';
+import { GobackComponentModule } from '@navigation';
 import { ProductdetailPage } from './productdetail.page';
 
 @NgModule({
@@ -13,7 +13,7 @@ import { ProductdetailPage } from './productdetail.page';
         component: ProductdetailPage,
         resolve: [ProductResolver]
       }
-    ]), GobackComponentModule],
+    ]), GobackComponentModule,],
   declarations: [ProductdetailPage],
   providers: [],
   exports: []

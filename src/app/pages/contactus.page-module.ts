@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ContactusComponentModule, FirebaseMessagesServiceModule } from '@contactus';
-import { GobackComponentModule } from '@goback';
+import { GobackComponentModule } from '@navigation';
 import { ContactusPage } from './contactus.page';
 import { AngularFireModule } from '@angular/fire/compat';
 
@@ -16,7 +16,7 @@ import { AngularFireModule } from '@angular/fire/compat';
         path: '',
         component: ContactusPage,
       }
-    ]), GobackComponentModule],
+    ]), GobackComponentModule,],
   declarations: [ContactusPage],
   providers: [],
   exports: []

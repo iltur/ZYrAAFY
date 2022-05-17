@@ -10,7 +10,7 @@ import { NavbarComponentModule } from '@navbar';
 import { AngularFireModule } from '@angular/fire/compat';
 import { FirebaseMessagesServiceModule } from '@contactus';
 import { FirebaseHeroServiceModule } from '@hero';
-import { GobackComponentModule } from '@goback';
+import { ButtonComponentModule } from '@navigation';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { GobackComponentModule } from '@goback';
     FirebaseMessagesServiceModule,
     AppRoutingModule,
     NavbarComponentModule,
-    GobackComponentModule,
+    ButtonComponentModule,
     FirestoreModule,
     FirebaseHeroServiceModule,
     AngularFireModule.initializeApp(environment.firebase),
