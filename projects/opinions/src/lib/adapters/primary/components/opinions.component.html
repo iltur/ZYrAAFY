@@ -1,0 +1,19 @@
+<p class="border bg-light w-100"></p>
+<div class="col herotext">
+  <h1>
+    <span class="fw-bold"> EVERY OPINION IS REALLY IMPORTANT TO US</span>
+  </h1>
+</div>
+<p class="border bg-light w-100"></p>
+<br />
+<div class="container" *ngFor="let item of opinion$ | async">
+  <div class="row">
+    <div class="col"><img [src]="item.imageUrl" class="testimg" /></div>
+    <div class="col text-white">
+      <h3 class="card-title fw-bold">{{ item.name }}<br /></h3>
+      <h5 class="">
+        <em>{{ item.text }}</em>
+      </h5>
+    </div>
+  </div>
+</div>
