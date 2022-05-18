@@ -1,10 +1,38 @@
-<form [formGroup]="contact" (ngSubmit)="onMessageSubmited(contact)">
-  <input type="text" formControlName="name" placeholder="Name" /><input
-    type="text"
-    formControlName="email"
-    placeholder="Email"
-  /><input type="text" formControlName="text" placeholder="Text" /><input
-    type="submit"
-    value="Submit"
-  />
-</form>
+<p class="border bg-light w-100"></p>
+<div class="col herotext">
+  <h1>
+    <span class="fw-bold">DROP US A LINE</span>
+  </h1>
+  <p class="border bg-light w-100"></p>
+  <br />
+  <div class="container-fluid">
+    <div class="col-1">
+      <form
+        [formGroup]="contact"
+        (ngSubmit)="onMessageSubmited(contact)"
+      ></form>
+
+      <div class="p-3 background">
+        <input type="text" formControlName="name" placeholder="Name" />
+      </div>
+    </div>
+
+    <div class="col-1">
+      <div class="p-3 background">
+        <input type="text" formControlName="email" placeholder="Email" />
+      </div>
+    </div>
+
+    <div class="col-1">
+      <div class="p-3 background">
+        <input
+          class="formmessage"
+          type="text"
+          formControlName="text"
+          placeholder="Text"
+        />
+      </div>
+      <input type="submit" class="background text-white" value="Send message" />
+    </div>
+  </div>
+</div>
