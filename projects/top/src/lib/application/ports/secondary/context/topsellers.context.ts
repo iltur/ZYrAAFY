@@ -1,3 +1,3 @@
 export interface TopsellersContext {
-  readonly topsellersId: string;
+  readonly TopsellersId: string;
 }

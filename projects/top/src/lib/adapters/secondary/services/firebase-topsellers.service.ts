@@ -16,6 +16,6 @@ export class FirebaseTopsellersService implements GetsAllTopsellersDtoPort, Gets
   }
 
   getOne(id: string): Observable<TopsellersDTO> {
-    return this._client.doc<TopsellersDTO>('topsellers/'+id).valueChanges({idField: 'id'}).pipe(switchMap((item) => (item ? of(item) : throwError(new Error('Item does not exist in firebase')))));
+    return this._client.doc<TopsellersDTO>('Topsellers/'  + id).valueChanges({idField: 'id'}).pipe(switchMap((item) => (item ? of(item) : throwError(new Error('Item does not exist in firebase')))));
   }
 }

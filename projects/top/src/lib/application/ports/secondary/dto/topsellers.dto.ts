@@ -3,4 +3,5 @@ export interface TopsellersDTO {
   readonly name: string;
   readonly price:number,
   readonly id:string,
+  readonly description: string;
 }

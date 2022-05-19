@@ -8,7 +8,7 @@ import { SELECTS_TOPSELLERS_CONTEXT, SelectsTopsellersContextPort } from '../../
 @Component({ selector: 'lib-topsellers-detalis', templateUrl: './topsellers-detalis.component.html', encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush })
 export class TopsellersDetalisComponent {
   topsellersDetalis$: Observable<TopsellersDTO> = this._selectsTopsellersContext.select().pipe(
-      switchMap(p => this._getsOneTopsellersDto.getOne(p.topsellersId as string))
+      switchMap(p => this._getsOneTopsellersDto.getOne(p.TopsellersId as string))
   );
 
   constructor(@Inject(GETS_ONE_TOPSELLERS_DTO) private _getsOneTopsellersDto: GetsOneTopsellersDtoPort, @Inject(SELECTS_TOPSELLERS_CONTEXT) private _selectsTopsellersContext: SelectsTopsellersContextPort) {

@@ -10,6 +10,9 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { FirebaseMessagesServiceModule } from '@contactus';
 import { FirebaseHeroServiceModule } from '@hero';
 import { ButtonComponentModule } from '@navigation';
+import { InMemoryProductStorageModule } from '@product';
+import { InMemoryTopsellerStorageModule } from 'projects/top/src/lib/adapters/secondary/storages/in-memory-topseller.storage-module';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +29,8 @@ import { ButtonComponentModule } from '@navigation';
     AngularFireModule.initializeApp(environment.firebase),
     // provideFirebaseApp(() => initializeApp(environment.firebase)),
     BrowserAnimationsModule,
+    InMemoryProductStorageModule,
+    InMemoryTopsellerStorageModule,
   ],
 
   providers: [],

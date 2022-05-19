@@ -1,0 +1,12 @@
+<div *ngIf="topsellersDetalis$ | async as topsellersDetail">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{topsellersDetail.name}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{topsellersDetail.description}}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">{{topsellersDetail.price}} zł</h6>
+            <img [src]="topsellersDetail.imageUrl" width="100" height="200">
+            <a href="#" class="card-link">Dodaj do koszyka</a>
+
+        </div>
+    </div>
+</div>
