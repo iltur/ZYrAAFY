@@ -6,6 +6,7 @@ import { ContactusPageModule } from './pages/contactus.page-module';
 import { ProductdetailPageModule } from './pages/productdetail.page-module';
 import { ConfirmationPageModule } from './pages/confirmation.page-module';
 import { CartPageModule } from './pages/cart.page-module';
+import { TopsellersdetalisPageModule } from './pages/topsellersdetalis.page-module';
 
 const routes: Routes = [{
   path: 'home',
@@ -34,7 +35,11 @@ const routes: Routes = [{
 {
   path: 'shoppingcart',
   loadChildren: () => CartPageModule
-}
+},
+  { 
+        path: 'topdetalis/:topsellersId', 
+        loadChildren: () => TopsellersdetalisPageModule
+      }
 ];
 
 @NgModule({

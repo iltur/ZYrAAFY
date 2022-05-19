@@ -12,7 +12,7 @@
       <div class="row">
         <div class="col" *ngFor="let item of topsellers$ | async">
         <div class="card background text-white" style="width: 15rem">
-          <img src="{{ item.imageUrl }}" class="card-img-top background productimgs" />
+          <img [routerLink]="'topdetalis/' + item.id" src="{{ item.imageUrl }}" class="card-img-top background productimgs" />
           <div class="card-body">
             <h5 class="card-title navtext fw-bold">{{ item.name }}</h5>
             <p class="card-text navtext">{{ item.price }} zł</p>
