@@ -1,13 +1,4 @@
-<p class="border bg-light w-100"></p>
-<div class="col herotext">
-  <h1>
-    <span class="fw-bold"> BILLING DETAILS </span>
-  </h1>
-  <p class="border bg-light w-100"></p>
-  <br />
-</div>
-<br />
-
+<!-- LISTA PRODUKTÓW (POWTÓRZENIE SC Z KOSZYKA) -->
 <p class="border bg-light w-100"></p>
 <div class="col herotext">
   <h1>
@@ -17,4 +8,24 @@
   <br />
 </div>
 
-TU POWTÓRZYĆ SC Z KOSZYKA
+<!-- SZCZEGÓŁY ROZLICZENIA/DOSTAWY/PŁATNOŚCI -->
+<p class="border bg-light w-100"></p>
+<div class="col herotext">
+  <h1>
+    <span class="fw-bold"> BILLING DETAILS </span>
+  </h1>
+  <p class="border bg-light w-100"></p>
+  <br />
+</div>
+
+<form [formGroup]="details" (ngSubmit)="onOrderSubmited(details)">
+  <input type="text" formControlName="name" placeholder="Name" /><br />
+  <input type="text" formControlName="address" placeholder="Address" /><br />
+  <input type="text" formControlName="town" placeholder="Town" /><br />
+  <input type="text" formControlName="code" placeholder="Code" /><br />
+  <input type="text" formControlName="country" placeholder="Country" /><br />
+  <input type="text" formControlName="phone" placeholder="Phone" /><br />
+  <input type="text" formControlName="email" placeholder="Email" /><br />
+  <input type="text" formControlName="delivery" placeholder="Delivery" /><br />
+  <input type="submit" value="Confirm and order!" />
+</form>

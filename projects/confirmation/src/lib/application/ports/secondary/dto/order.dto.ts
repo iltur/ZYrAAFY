@@ -7,4 +7,5 @@ export interface OrderDTO {
   readonly phone: number;
   readonly email: string;
   readonly delivery: string;
+  readonly count: number;
 }
