@@ -3,7 +3,7 @@
   <h1>
     <span class="fw-bold">DROP US A LINE</span>
   </h1>
-  <p class="border bg-light w-100"></p>
+  <!-- <p class="border bg-light w-100"></p>
   <br />
   <div class="container-fluid">
     <div class="col-1">
@@ -33,6 +33,28 @@
         />
       </div>
       <input type="submit" class="background text-white" value="Send message" />
+    </div>
+  </div>
+</div> -->
+  <div class="container-fluid">
+    <div class="col-1">
+      <form [formGroup]="contact" (ngSubmit)="onMessageSubmited(contact)">
+        <input
+          type="text"
+          formControlName="name"
+          placeholder="Name"
+        /><br /><br /><input
+          type="text"
+          formControlName="email"
+          placeholder="Email"
+        /><br /><br /><input
+          type="text"
+          class="p-5"
+          style="width: 500px"
+          formControlName="text"
+          placeholder="Text"
+        /><br /><br /><input type="submit" value="SEND MESSAGE" />
+      </form>
     </div>
   </div>
 </div>

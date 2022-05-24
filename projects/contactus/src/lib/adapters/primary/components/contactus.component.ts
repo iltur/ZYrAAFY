@@ -11,16 +11,16 @@ import { ADDS_MESSAGES_DTO, AddsMessagesDtoPort } from '../../../application/por
 })
 export class ContactusComponent {
   readonly contact: FormGroup = new FormGroup({
-    name: new FormControl('', [Validators.required]),
-    email: new FormControl('', [Validators.required]),
-    text: new FormControl('', [Validators.required])
+    name: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    email: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    text: new FormControl('', [Validators.required, Validators.minLength(3)])
   });
 
   constructor(@Inject(ADDS_MESSAGES_DTO) private _addsMessagesDto: AddsMessagesDtoPort) {
   }
 
   onMessageSubmited(contact: FormGroup): void {
-    if (contact.invalid) { return; }
+    if (contact.invalid) { return }
 
     this._addsMessagesDto.add({
       name: contact.get('name')?.value,
