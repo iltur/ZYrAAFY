@@ -12,8 +12,8 @@ import { ADDS_MESSAGES_DTO, AddsMessagesDtoPort } from '../../../application/por
 export class ContactusComponent {
   readonly contact: FormGroup = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.minLength(3)]),
-    email: new FormControl('', [Validators.required, Validators.minLength(3)]),
-    text: new FormControl('', [Validators.required, Validators.minLength(3)])
+    email: new FormControl('', [Validators.required, Validators.email]),
+    text: new FormControl('', [Validators.required, Validators.minLength(1)])
   });
 
   constructor(@Inject(ADDS_MESSAGES_DTO) private _addsMessagesDto: AddsMessagesDtoPort) {
@@ -21,6 +21,9 @@ export class ContactusComponent {
 
   onMessageSubmited(contact: FormGroup): void {
     if (contact.invalid) { return }
+
+    // jak wywołać alert w przypadku braku małpy w adresei email?
+
 
     this._addsMessagesDto.add({
       name: contact.get('name')?.value,
@@ -31,5 +34,9 @@ export class ContactusComponent {
     this.contact.reset();
 
 
+
+
   }
+
+
 }

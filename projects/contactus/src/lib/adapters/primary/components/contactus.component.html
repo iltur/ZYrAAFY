@@ -3,57 +3,69 @@
   <h1>
     <span class="fw-bold">DROP US A LINE</span>
   </h1>
-  <!-- <p class="border bg-light w-100"></p>
+  <p class="border bg-light w-100"></p>
   <br />
   <div class="container-fluid">
-    <div class="col-1">
-      <form
-        [formGroup]="contact"
-        (ngSubmit)="onMessageSubmited(contact)"
-      ></form>
-
-      <div class="p-3 background">
-        <input type="text" formControlName="name" placeholder="Name" />
-      </div>
-    </div>
-
-    <div class="col-1">
-      <div class="p-3 background">
-        <input type="text" formControlName="email" placeholder="Email" />
-      </div>
-    </div>
-
-    <div class="col-1">
-      <div class="p-3 background">
-        <input
-          class="formmessage"
-          type="text"
-          formControlName="text"
-          placeholder="Text"
-        />
-      </div>
-      <input type="submit" class="background text-white" value="Send message" />
-    </div>
-  </div>
-</div> -->
-  <div class="container-fluid">
-    <div class="col-1">
+    <div class="col-5">
       <form [formGroup]="contact" (ngSubmit)="onMessageSubmited(contact)">
         <input
           type="text"
+          style="width: 500px"
           formControlName="name"
           placeholder="Name"
-        /><br /><br /><input
+        /><br />
+
+        <div
+          *ngIf="
+            contact.get('name')?.touched &&
+            contact.get('name')?.hasError('required')
+          "
+          class="alert alert-danger fw-bold"
+        >
+          Please provide your name
+        </div>
+
+        <br /><input
           type="text"
+          style="width: 500px"
           formControlName="email"
           placeholder="Email"
-        /><br /><br /><input
+        /><br />
+
+        <div
+          *ngIf="
+            contact.get('email')?.touched &&
+            contact.get('email')?.hasError('required')
+          "
+          class="alert alert-danger fw-bold"
+        >
+          Please provide an email address
+        </div>
+        <div
+          *ngIf="contact.get('email')?.hasError('email')"
+          class="alert alert-danger fw-bold"
+        >
+          Provided email is not a valid email
+        </div>
+        <br />
+
+        <input
           type="text"
           class="p-5"
           style="width: 500px"
           formControlName="text"
           placeholder="Text"
-        /><br /><br /><input type="submit" value="SEND MESSAGE" />
+        /><br />
+        <div
+          *ngIf="
+            contact.get('text')?.touched &&
+            contact.get('text')?.hasError('required')
+          "
+          class="alert alert-danger fw-bold"
+        >
+          Please provide your message
+        </div>
+        <input type="submit" value="SEND MESSAGE" />
       </form>
     </div>
   </div>
