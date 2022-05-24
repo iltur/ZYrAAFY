@@ -1,6 +1,14 @@
 <p class="border bg-light w-100"></p>
 <div class="container-fluid">
   <button
+    [routerLink]="'/'"
+    class="background navtext navpaddingsright"
+    type="button"
+  >
+    HOME
+  </button>
+
+  <button
     [routerLink]="'./aboutus'"
     class="background navtext navpaddingsright"
     type="button"
@@ -14,14 +22,6 @@
     type="button"
   >
     CONTACT
-  </button>
-
-  <button
-    [routerLink]="'/'"
-    class="background navtext navpaddingsright"
-    type="button"
-  >
-    HOME
   </button>
 
   <button
