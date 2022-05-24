@@ -8,6 +8,7 @@ import { ConfirmationPageModule } from './pages/confirmation.page-module';
 import { CartPageModule } from './pages/cart.page-module';
 import { TopsellersdetalisPageModule } from './pages/topsellersdetalis.page-module';
 import { BillingDetailPageModule } from './pages/billing-detail.page-module';
+import { SendConfirmationPageModule } from './pages/send-confirmation.page-module';
 
 const routes: Routes = [{
   path: 'home',
@@ -44,6 +45,10 @@ const routes: Routes = [{
 {
   path: 'billing',
   loadChildren: () => BillingDetailPageModule
+},
+{
+  path: 'messagesent',
+  loadChildren: () => SendConfirmationPageModule
 }
 ];
 

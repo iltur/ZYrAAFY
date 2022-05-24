@@ -2,7 +2,7 @@
 import { Component, ViewEncapsulation, ChangeDetectionStrategy, Inject } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ADDS_MESSAGES_DTO, AddsMessagesDtoPort } from '../../../application/ports/secondary/dto/adds-messages.dto-port';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'lib-contactus',
   templateUrl: './contactus.component.html',
@@ -16,13 +16,13 @@ export class ContactusComponent {
     text: new FormControl('', [Validators.required, Validators.minLength(1)])
   });
 
-  constructor(@Inject(ADDS_MESSAGES_DTO) private _addsMessagesDto: AddsMessagesDtoPort) {
+  constructor(@Inject(ADDS_MESSAGES_DTO) private _addsMessagesDto: AddsMessagesDtoPort, private router: Router) {
   }
 
   onMessageSubmited(contact: FormGroup): void {
     if (contact.invalid) { return }
 
-    // jak wywołać alert w przypadku braku małpy w adresei email?
+
 
 
     this._addsMessagesDto.add({
@@ -32,6 +32,7 @@ export class ContactusComponent {
     });
 
     this.contact.reset();
+    this.router.navigate(['//messagesent']);
 
 
 
