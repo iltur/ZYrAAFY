@@ -2,11 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { GobackComponentModule } from '@navigation';
-import { ConfirmationComponentModule, FirebaseOrderServiceModule } from '@confirmation';
 import { ConfirmationPage } from './confirmation.page';
 
 @NgModule({
-  imports: [CommonModule, ConfirmationComponentModule,
+  imports: [CommonModule,
     RouterModule.forChild([
       {
         path: '',
@@ -14,8 +13,7 @@ import { ConfirmationPage } from './confirmation.page';
       }
     ]),
     GobackComponentModule,
-    ConfirmationComponentModule,
-    FirebaseOrderServiceModule
+
   ],
   declarations: [ConfirmationPage],
   providers: [],

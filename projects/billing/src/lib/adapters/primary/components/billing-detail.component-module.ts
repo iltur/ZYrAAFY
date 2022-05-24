@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BillingDetailComponent } from './billing-detail.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ConfirmationComponent } from './confirmation.component';
 
 @NgModule({
 	imports: [CommonModule, ReactiveFormsModule],
-	declarations: [ConfirmationComponent],
+	declarations: [BillingDetailComponent],
 	providers: [],
-	exports: [ConfirmationComponent]
+	exports: [BillingDetailComponent]
 })
-export class ConfirmationComponentModule {
+export class BillingDetailComponentModule {
 }
