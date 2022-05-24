@@ -30,7 +30,7 @@ export class BillingDetailComponent {
 
         });
         this.details.reset();
-        this.router.navigate(['/confirmation'])
+        this.router.navigate(['/billing'])
     }
 }
 
