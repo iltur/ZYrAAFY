@@ -6,7 +6,7 @@ import { ConfirmationComponentModule, FirebaseOrderServiceModule } from '@confir
 import { ConfirmationPage } from './confirmation.page';
 
 @NgModule({
-  imports: [CommonModule,
+  imports: [CommonModule, ConfirmationComponentModule,
     RouterModule.forChild([
       {
         path: '',

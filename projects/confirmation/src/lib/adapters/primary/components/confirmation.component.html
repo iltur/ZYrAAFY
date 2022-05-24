@@ -18,14 +18,52 @@
   <br />
 </div>
 
-<form [formGroup]="details" (ngSubmit)="onOrderSubmited(details)">
-  <input type="text" formControlName="name" placeholder="Name" /><br />
-  <input type="text" formControlName="address" placeholder="Address" /><br />
-  <input type="text" formControlName="town" placeholder="Town" /><br />
-  <input type="text" formControlName="code" placeholder="Code" /><br />
-  <input type="text" formControlName="country" placeholder="Country" /><br />
-  <input type="text" formControlName="phone" placeholder="Phone" /><br />
-  <input type="text" formControlName="email" placeholder="Email" /><br />
-  <input type="text" formControlName="delivery" placeholder="Delivery" /><br />
-  <input type="submit" value="Confirm and order!" />
-</form>
+<div class="container-fluid">
+  <div class="col-1">
+    <form [formGroup]="details" (ngSubmit)="onOrderSubmited(details)">
+      <input
+        type="text"
+        formControlName="name"
+        placeholder="Name"
+      /><br /><br />
+      <input
+        type="text"
+        formControlName="address"
+        placeholder="Address"
+      /><br /><br />
+      <input
+        type="text"
+        formControlName="town"
+        placeholder="Town"
+      /><br /><br />
+      <input
+        type="text"
+        formControlName="code"
+        placeholder="Code"
+      /><br /><br />
+      <input
+        type="text"
+        formControlName="country"
+        placeholder="Country"
+      /><br /><br />
+      <input
+        type="text"
+        formControlName="phone"
+        placeholder="Phone"
+      /><br /><br />
+      <input
+        type="text"
+        formControlName="email"
+        placeholder="Email"
+      /><br /><br />
+      <input
+        type="text"
+        formControlName="delivery"
+        placeholder="Delivery"
+      /><br />
+      <p class="text-white fw-bold">*DPD DELIVERY OR PICKUP IN PERSON ONLY</p>
+      <br /><br />
+      <input type="submit" value="Confirm and order!" />
+    </form>
+  </div>
+</div>
