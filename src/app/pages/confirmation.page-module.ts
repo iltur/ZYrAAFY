@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { GobackComponentModule } from '@navigation';
+import { OrderConfirmationComponentModule } from '@billing';
 import { ConfirmationPage } from './confirmation.page';
 
 @NgModule({
@@ -13,7 +14,7 @@ import { ConfirmationPage } from './confirmation.page';
       }
     ]),
     GobackComponentModule,
-
+    OrderConfirmationComponentModule
   ],
   declarations: [ConfirmationPage],
   providers: [],
