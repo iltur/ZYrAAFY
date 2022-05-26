@@ -7,10 +7,11 @@ import { FirebaseTopsellersServiceModule, TopsellersDetalisComponentModule } fro
 import { TopsellersIdResolver } from 'projects/top/src/lib/adapters/primary/resolvers/topsellers-id.resolver';
 import { InMemoryProductStorageModule } from '@product';
 import { TopsellersIdResolverModule } from 'projects/top/src/lib/adapters/primary/resolvers/topsellers-id.resolver-module';
+import { GobackComponentModule } from '@navigation';
 
 
 
-@NgModule({ imports: [CommonModule,  FirebaseTopsellersServiceModule, InMemoryProductStorageModule, TopsellersIdResolverModule,
+@NgModule({ imports: [CommonModule,  FirebaseTopsellersServiceModule, InMemoryProductStorageModule, TopsellersIdResolverModule, GobackComponentModule,
   TopsellersDetalisComponentModule, RouterModule.forChild([
    {
           path: '',
