@@ -1,37 +1,89 @@
-import { ChangeDetectionStrategy, Component, Inject, ViewEncapsulation } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Inject,
+  ViewEncapsulation,
+} from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+
+import {
+  ADDS_ORDER_DETAIL_DTO,
+  AddsOrderDetailDtoPort,
+} from '../../../application/ports/secondary/dto/adds-order-detail.dto-port';
 import { Router } from '@angular/router';
-import { ADDS_ORDER_DTO } from '../../../application/ports/secondary/dto/adds-order.dto-port';
-import { AddsOrderDtoPort } from '../../../application/ports/secondary/dto/adds-order.dto-port';
 
-@Component({ selector: 'lib-billing-detail', templateUrl: './billing-detail.component.html', encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush })
+@Component({
+  selector: 'lib-billing-detail',
+  templateUrl: './billing-detail.component.html',
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+})
 export class BillingDetailComponent {
-    count: number = Date.now()
+  count: number = Date.now();
+  nameValidation = false;
+  adressValidation = false;
+  townValidation = false;
+  phoneValidation = false;
+  emailValidation = false;
 
-    readonly details: FormGroup = new FormGroup({ name: new FormControl('', [Validators.required]), address: new FormControl('', [Validators.required]), town: new FormControl('', [Validators.required]), code: new FormControl('', [Validators.required]), country: new FormControl('', [Validators.required]), phone: new FormControl('', [Validators.required]), email: new FormControl('', [Validators.required]), delivery: new FormControl('', [Validators.required]) });
+  readonly orderDetail: FormGroup = new FormGroup({
+    name: new FormControl('', Validators.required),
+    adress: new FormControl('', Validators.required),
+    town: new FormControl('', Validators.required),
+    phone: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.required),
+  });
 
-    constructor(@Inject(ADDS_ORDER_DTO) private _addsOrderDto: AddsOrderDtoPort, private router: Router) {
+  constructor(
+    @Inject(ADDS_ORDER_DETAIL_DTO)
+    private _addsOrderDto: AddsOrderDetailDtoPort,
+    private router: Router,
+    @Inject(ADDS_ORDER_DETAIL_DTO)
+    private _addsOrderDetailDto: AddsOrderDetailDtoPort
+  ) {}
+
+  onOrderDetailsSubmited(orderDetail: FormGroup): void {
+    if (orderDetail.invalid) {
+      return;
+    }
+    this._addsOrderDto.add({
+      name: orderDetail.get('name')?.value,
+      adress: orderDetail.get('adress')?.value,
+      town: orderDetail.get('town')?.value,
+      phone: orderDetail.get('phone')?.value,
+      email: orderDetail.get('email')?.value,
+    });
+    orderDetail.reset();
+  }
+  onItemClicked(orderDetail: FormGroup) {
+    if (!orderDetail.value.name) {
+      this.nameValidation = true;
+    } else {
+      this.nameValidation = false;
     }
 
-    onOrderSubmited(details: FormGroup): void {
-        if (details.invalid) {
-            return
-        }
-        this._addsOrderDto.add({
-            name: details?.get('name')?.value,
-            address: details?.get('address')?.value,
-            town: details?.get('town')?.value,
-            code: details?.get('code')?.value,
-            country: details?.get('country')?.value,
-            phone: details?.get('phone')?.value,
-            email: details?.get('email')?.value,
-            delivery: details?.get('delivery')?.value,
-            count: Date.now(),
-
-        });
-        this.details.reset();
-        this.router.navigate(['./confirmation'])
+    if (!orderDetail.value.adress) {
+      this.adressValidation = true;
+    } else {
+      this.adressValidation = false;
     }
+
+    if (!orderDetail.value.town) {
+      this.townValidation = true;
+    } else {
+      this.townValidation = false;
+    }
+
+    if (!orderDetail.value.phone) {
+      this.phoneValidation = true;
+    } else {
+      this.phoneValidation = false;
+    }
+
+    if (!orderDetail.value.email) {
+      this.emailValidation = true;
+    } else {
+      this.emailValidation = false;
+    }
+  }
 }
-
-
