@@ -1,23 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { BillingDetailComponentModule, FirebaseOrderServiceModule } from '@billing';
+import {
+  BillingDetailComponentModule,
+  FirebaseOrderDetailServiceModule,
+} from '@billing';
 import { BillingDetailPage } from './billing-detail.page';
 
 @NgModule({
-  imports: [CommonModule, BillingDetailComponentModule,
+  imports: [
+    CommonModule,
+    BillingDetailComponentModule,
     RouterModule.forChild([
       {
         path: '',
         component: BillingDetailPage,
-      }
+      },
     ]),
     BillingDetailComponentModule,
-    FirebaseOrderServiceModule
+
+    FirebaseOrderDetailServiceModule,
   ],
   declarations: [BillingDetailPage],
   providers: [],
-  exports: []
+  exports: [],
 })
-export class BillingDetailPageModule {
-}
+export class BillingDetailPageModule {}

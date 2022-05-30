@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BillingDetailComponent } from './billing-detail.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BillingDetailComponent } from './billing-detail.component';
 
 @NgModule({
 	imports: [CommonModule, ReactiveFormsModule],
