@@ -1,10 +1,10 @@
 import {
-  Component,
-  ViewEncapsulation,
   ChangeDetectionStrategy,
+  Component,
   Inject,
+  ViewEncapsulation,
 } from '@angular/core';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { ProductDTO } from '../../../application/ports/secondary/dto/product.dto';
 import {
   GETS_ALL_PRODUCT_DTO,
@@ -12,13 +12,16 @@ import {
 } from '../../../application/ports/secondary/dto/gets-all-product.dto-port';
 
 @Component({
-  selector: 'lib-product-list',
-  templateUrl: './product-list.component.html',
+  selector: 'lib-top-sellers',
+  templateUrl: './top-sellers.component.html',
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProductListComponent {
-  products$: Observable<ProductDTO[]> = this._getsAllProductDto.getAll();
+export class TopSellersComponent {
+  topSellers$: Observable<ProductDTO[]> = this._getsAllProductDto.getAll().pipe(
+    map((topSell: ProductDTO[]) => topSell.sort((a, b) => b.order - a.order)),
+    map((product: ProductDTO[]) => product.slice(0, 3))
+  );
 
   constructor(
     @Inject(GETS_ALL_PRODUCT_DTO)
