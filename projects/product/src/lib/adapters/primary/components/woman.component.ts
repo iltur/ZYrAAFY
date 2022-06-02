@@ -6,7 +6,7 @@ import { ProductDetailComponent } from './product-detail.component';
 
 @Component({ selector: 'lib-woman', templateUrl: './woman.component.html', encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush })
 export class WomanComponent {
-  woman$: Observable<ProductDTO[]> = this._getsAllProductDto.getAll()
+  woman$: Observable<ProductDTO[]> = this._getsAllProductDto.getAll().pipe(map(products => products.filter((product)=> product.plec)));;
  
 
   constructor(@Inject(GETS_ALL_PRODUCT_DTO) private _getsAllProductDto: GetsAllProductDtoPort) {
