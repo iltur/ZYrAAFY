@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
           <div class="col"*ngFor="let item of man$ | async">
-            <div class="card background text-white" style="width: 15rem">
+            <div class="card background text-black" style="width: 15rem">
               <img
                 [routerLink]="'details/' + item.id"
                 src="{{ item.imageUrl }}"
@@ -19,7 +19,7 @@
                     width="40"
                     height="40"
                     fill="currentColor"
-                    class="bi bi-bag-heart text-white"
+                    class="bi bi-bag-heart text-black"
                     viewBox="0 0 16 16"
                   >
                     <path
