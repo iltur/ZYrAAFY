@@ -6,114 +6,120 @@
 /* Importing Datepicker SCSS file. */
 @import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
 
-.background {
-   background-color: #4c35e2;
-}
+// .background {
+//    background-color: #4c35e2;
+// }
 
-.mainheading {
-   font-family: Arial, Helvetica, sans-serif;
-   font-style: normal;
-   color: white;
-   size: 120px;
-   padding-top: 50px;
-   padding-bottom: 20px;
-   line-height: 60px;
-   text-align: center;
-   text-transform: uppercase;
-}
+// .mainheading {
+//    font-family: Arial, Helvetica, sans-serif;
+//    font-style: normal;
+//    color: white;
+//    size: 120px;
+//    padding-top: 50px;
+//    padding-bottom: 20px;
+//    line-height: 60px;
+//    text-align: center;
+//    text-transform: uppercase;
+// }
 
-.scbackground {
-   height: 650px;
-   width: 100%;
-   background-size: cover;
-   background-image: url(https://t4.ftcdn.net/jpg/02/11/54/39/240_F_211543946_Dv89GzbKVLyotp9dNM2Gx7bYGnBFR8jU.jpg
+// .scbackground {
+//    height: 650px;
+//    width: 100%;
+//    background-size: cover;
+//    background-image: url(https://t4.ftcdn.net/jpg/02/11/54/39/240_F_211543946_Dv89GzbKVLyotp9dNM2Gx7bYGnBFR8jU.jpg
       
-   );
-}
+//    );
+// }
 
-.contactbackgroundpic {
-   height: 250px;
-   width: 100%;
-   background-size:cover;
-   background-position: bottom;
-   background-image: url(https://t4.ftcdn.net/jpg/02/90/37/73/240_F_290377366_Ma5x0kvxFVSESfDPv4rg0wRinKYNY4mk.jpg
-);
-}
+// .contactbackgroundpic {
+//    height: 250px;
+//    width: 100%;
+//    background-size:cover;
+//    background-position: bottom;
+//    background-image: url(https://t4.ftcdn.net/jpg/02/90/37/73/240_F_290377366_Ma5x0kvxFVSESfDPv4rg0wRinKYNY4mk.jpg
+// );
+// }
 
-.aboutbackgroundpic {
-height: 350px;
-width: 100%;
-background-size: cover;
-background-position: bottom;
-   background-image: url(https://t4.ftcdn.net/jpg/03/02/23/57/240_F_302235762_xl56pLHpu5C3axGy4CYODQjKZPupqbXe.jpg
-   );}
+// .aboutbackgroundpic {
+// height: 350px;
+// width: 100%;
+// background-size: cover;
+// background-position: bottom;
+//    background-image: url(https://t4.ftcdn.net/jpg/03/02/23/57/240_F_302235762_xl56pLHpu5C3axGy4CYODQjKZPupqbXe.jpg
+//    );}
 
-.herotext {
-   font-family: Arial, Helvetica, sans-serif;
-   font-style: normal;
-   color: white;
-   size: 48px;
-   line-height: 48px;
-   text-align: center;
-   text-transform: uppercase;
-}
+// .herotext {
+//    font-family: Arial, Helvetica, sans-serif;
+//    font-style: normal;
+//    color: white;
+//    size: 48px;
+//    line-height: 48px;
+//    text-align: center;
+//    text-transform: uppercase;
+// }
 
-.navtext {
-   font-family: Arial, Helvetica, sans-serif;
-   color: white;
-   font-size:  24px;
-   text-align: center;
-   border: none;
+// .navtext {
+//    font-family: Arial, Helvetica, sans-serif;
+//    color: white;
+//    font-size:  24px;
+//    text-align: center;
+//    border: none;
 
    
-}
+// }
 
-.contacttext {
-   font-family: Arial,
-   Helvetica,
-   sans-serif;
-   color: white;
-   font-size: 24px;
-   text-align: left;
-   border: none;
-}
+// .contacttext {
+//    font-family: Arial,
+//    Helvetica,
+//    sans-serif;
+//    color: white;
+//    font-size: 24px;
+//    text-align: left;
+//    border: none;
+// }
 
-.navpaddingsleft {
-   padding-left: 1050px;
-}
-.navpaddingsright {
-   padding-right: 10%;
-}
+// .navpaddingsleft {
+//    padding-left: 1050px;
+// }
+// .navpaddingsright {
+//    padding-right: 10%;
+// }
 
-.photo{
-   max-width: 65%;
-   height: auto;
-   align-items: center;
-}
+// .photo{
+//    max-width: 65%;
+//    height: auto;
+//    align-items: center;
+// }
 
-.productimgs {
+// .productimgs {
       
-      width: 260px;
-      height: 343.58px;
-      align-content: center;
-   }
- .testimg {
-    border-radius: 50%;
-    max-width: 100%;
-    max-height: 100%;
- }
+//       width: 260px;
+//       height: 343.58px;
+//       align-content: center;
+//    }
+//  .testimg {
+//     border-radius: 50%;
+//     max-width: 100%;
+//     max-height: 100%;
+//  }
 
- .formmessage{
-   width: 820px; 
-   height: 188px
- }
+//  .formmessage{
+//    width: 820px; 
+//    height: 188px
+//  }
 
-.containertext {
-   font-family: Arial,Helvetica,sans-serif;
-   color: white; 
-   text-align: justify;
+// .containertext {
+//    font-family: Arial,Helvetica,sans-serif;
+//    color: white; 
+//    text-align: justify;
 
+// }
+
+.pointer{
+   cursor: pointer;
 }
-
-
+.heroBackground{ 
+    width:auto;
+   height: 650px;
+   object-fit: cover;}
 

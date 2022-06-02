@@ -9,21 +9,18 @@ import { RouterModule } from '@angular/router';
 import { AngularFireModule } from '@angular/fire/compat';
 import { FirebaseMessagesServiceModule } from '@contactus';
 import { FirebaseHeroServiceModule } from '@hero';
-import { ButtonComponentModule } from '@navigation';
+import { NavigationButtonsComponentModule } from '@navigation';
 import { InMemoryProductStorageModule } from '@product';
 import { InMemoryTopsellerStorageModule } from 'projects/top/src/lib/adapters/secondary/storages/in-memory-topseller.storage-module';
 
-
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     RouterModule,
     FirebaseMessagesServiceModule,
     AppRoutingModule,
-    ButtonComponentModule,
+
     FirestoreModule,
     FirebaseHeroServiceModule,
     AngularFireModule.initializeApp(environment.firebase),
@@ -31,9 +28,10 @@ import { InMemoryTopsellerStorageModule } from 'projects/top/src/lib/adapters/se
     BrowserAnimationsModule,
     InMemoryProductStorageModule,
     InMemoryTopsellerStorageModule,
+    NavigationButtonsComponentModule,
   ],
 
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

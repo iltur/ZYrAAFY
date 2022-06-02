@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FirebaseHeroServiceModule, HeroComponentModule } from '@hero';
-import { FirebaseProductServiceModule, ProductListComponentModule, ShopDescriptionComponentModule } from '@product';
+import { FirebaseProductServiceModule, ProductListComponentModule, ShopDescriptionComponentModule, TopSellersComponentModule } from '@product';
 import { FirebaseTopsellersServiceModule, TopsellersComponentModule } from '@top';
 import { HomePage } from './home.page';
 
@@ -18,7 +18,7 @@ import { HomePage } from './home.page';
     ]),
     ProductListComponentModule,
     FirebaseProductServiceModule, FirebaseHeroServiceModule,
-    FirebaseProductServiceModule, TopsellersComponentModule, FirebaseTopsellersServiceModule, ShopDescriptionComponentModule],
+    FirebaseProductServiceModule, TopsellersComponentModule, FirebaseTopsellersServiceModule, ShopDescriptionComponentModule, TopSellersComponentModule],
   declarations: [HomePage],
   providers: [],
   exports: [],

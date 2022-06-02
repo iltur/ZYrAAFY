@@ -1,16 +1,36 @@
-import { ChangeDetectionStrategy, Component, Inject, ViewEncapsulation } from '@angular/core';
-import { Observable } from 'rxjs';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  Inject,
+  ViewEncapsulation,
+} from '@angular/core';
+import { map, Observable } from 'rxjs';
 import { TopsellersDTO } from '../../../application/ports/secondary/dto/topsellers.dto';
-import { GETS_ALL_TOPSELLERS_DTO, GetsAllTopsellersDtoPort } from '../../../application/ports/secondary/dto/gets-all-topsellers.dto-port';
-import { GETS_ONE_TOPSELLERS_DTO, GetsOneTopsellersDtoPort } from '../../../application/ports/secondary/dto/gets-one-topsellers.dto-port';
-import { SETS_STATE_TOPSELLERS_CONTEXT, SetsStateTopsellersContextPort } from '../../../application/ports/secondary/context/sets-state-topsellers.context-port';
+import {
+  GETS_ALL_TOPSELLERS_DTO,
+  GetsAllTopsellersDtoPort,
+} from '../../../application/ports/secondary/dto/gets-all-topsellers.dto-port';
+import {
+  GETS_ALL_PRODUCT_DTO,
+  GetsAllProductDtoPort,
+} from '../../../../../../product/src/lib/application/ports/secondary/dto/gets-all-product.dto-port';
+import { ProductDTO } from 'projects/product/src/lib/application/ports/secondary/dto/product.dto';
 
-@Component({ selector: 'lib-topsellers', templateUrl: './topsellers.component.html', encapsulation: ViewEncapsulation.None, changeDetection: ChangeDetectionStrategy.OnPush })
+@Component({
+  selector: 'lib-topsellers',
+  templateUrl: './topsellers.component.html',
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+})
 export class TopsellersComponent {
-  topsellers$: Observable<TopsellersDTO[]> = this._getsAllTopsellersDto.getAll();
+  topsellers$: Observable<ProductDTO[]> = this._getsAllProductDtoPort
+    .getAll()
+    .pipe(map((product: ProductDTO[]) => product.slice(0, 2)));
 
-
-  constructor(@Inject(GETS_ALL_TOPSELLERS_DTO) private _getsAllTopsellersDto: GetsAllTopsellersDtoPort, @Inject(GETS_ONE_TOPSELLERS_DTO) private _getsOneTopsellersDto: GetsOneTopsellersDtoPort, @Inject(SETS_STATE_TOPSELLERS_CONTEXT) private _setsStateTopsellersContext: SetsStateTopsellersContextPort) {
-  }
-
+  constructor(
+    @Inject(GETS_ALL_TOPSELLERS_DTO)
+    private _getsAllTopsellersDto: GetsAllTopsellersDtoPort,
+    @Inject(GETS_ALL_PRODUCT_DTO)
+    private _getsAllProductDtoPort: GetsAllProductDtoPort
+  ) {}
 }
