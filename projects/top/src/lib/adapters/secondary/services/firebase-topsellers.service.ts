@@ -7,15 +7,27 @@ import { GetsOneTopsellersDtoPort } from '../../../application/ports/secondary/d
 import { TopsellersDTO } from '../../../application/ports/secondary/dto/topsellers.dto';
 
 @Injectable()
-export class FirebaseTopsellersService implements GetsAllTopsellersDtoPort, GetsOneTopsellersDtoPort {
-  constructor(private _client: AngularFirestore) {
-  }
+export class FirebaseTopsellersService
+  implements GetsAllTopsellersDtoPort, GetsOneTopsellersDtoPort
+{
+  constructor(private _client: AngularFirestore) {}
 
   getAll(): Observable<TopsellersDTO[]> {
-    return this._client.collection<TopsellersDTO>('Topsellers').valueChanges(({idField: 'id'}));
+    return this._client
+      .collection<TopsellersDTO>('Topsellers')
+      .valueChanges({ idField: 'id' });
   }
 
   getOne(id: string): Observable<TopsellersDTO> {
-    return this._client.doc<TopsellersDTO>('Topsellers/'  + id).valueChanges({idField: 'id'}).pipe(switchMap((item) => (item ? of(item) : throwError(new Error('Item does not exist in firebase')))));
+    return this._client
+      .doc<TopsellersDTO>('Topsellers/' + id)
+      .valueChanges({ idField: 'id' })
+      .pipe(
+        switchMap((item) =>
+          item
+            ? of(item)
+            : throwError(new Error('Item does not exist in firebase'))
+        )
+      );
   }
 }

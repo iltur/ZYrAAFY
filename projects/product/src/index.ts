@@ -6,3 +6,4 @@ export * from './lib/adapters/primary/resolvers/product.resolver';
 export * from './lib/adapters/primary/resolvers/product.resolver-module';
 export * from './lib/adapters/primary/components/cart.component-module';
 export * from './lib/adapters/primary/components/shop-description.component-module';
+export * from './lib/adapters/primary/components/top-sellers.component-module';

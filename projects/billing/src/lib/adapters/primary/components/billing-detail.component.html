@@ -106,6 +106,12 @@
         >
           The field is empty
         </div>
+        <div
+          *ngIf="orderDetail.get('email')?.hasError('email')"
+          class="alert alert-danger fw-bold"
+        >
+          Provided email is not a valid email
+        </div>
       </div>
 
       <input
