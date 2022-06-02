@@ -9,6 +9,8 @@ import { CartPageModule } from './pages/cart.page-module';
 import { TopsellersdetalisPageModule } from './pages/topsellersdetalis.page-module';
 import { BillingDetailPageModule } from './pages/billing-detail.page-module';
 import { SendConfirmationPageModule } from './pages/send-confirmation.page-module';
+import { WomanPageModule } from './pages/woman.page-module';
+import { ManPageModule } from './pages/man.page-module';
 
 const routes: Routes = [{
   path: 'home',
@@ -49,7 +51,15 @@ const routes: Routes = [{
 {
   path: 'messagesent',
   loadChildren: () => SendConfirmationPageModule
-}
+},
+  { 
+        path: 'woman', 
+        loadChildren: () => WomanPageModule
+      },
+  { 
+        path: 'man', 
+        loadChildren: () => ManPageModule
+      }
 ];
 
 @NgModule({
