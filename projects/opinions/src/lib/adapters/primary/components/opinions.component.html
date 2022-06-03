@@ -9,14 +9,14 @@
 <div class="container" *ngFor="let item of opinion$ | async">
   <div class="row">
     <div class="col"><img [src]="item.imageUrl" class="testimg" /></div>
-    <div class="col text-white">
+    <div class="col">
       <h3 class="card-title fw-bold">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="30"
           height="30"
           fill="currentColor"
-          class="bi bi-bag-heart text-white"
+          class="bi bi-bag-heart"
           viewBox="0 0 16 16"
         >
           <path
