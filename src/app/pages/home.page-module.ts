@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { FirebaseHeroServiceModule, HeroComponentModule } from '@hero';
 import { FirebaseProductServiceModule, ProductListComponentModule, ShopDescriptionComponentModule, TopSellersComponentModule } from '@product';
 import { FirebaseTopsellersServiceModule, TopsellersComponentModule } from '@top';
+import { FooterComponentModule } from '@footer';
 import { HomePage } from './home.page';
 
 @NgModule({
@@ -18,7 +19,7 @@ import { HomePage } from './home.page';
     ]),
     ProductListComponentModule,
     FirebaseProductServiceModule, FirebaseHeroServiceModule,
-    FirebaseProductServiceModule, TopsellersComponentModule, FirebaseTopsellersServiceModule, ShopDescriptionComponentModule, TopSellersComponentModule],
+    FirebaseProductServiceModule, TopsellersComponentModule, FirebaseTopsellersServiceModule, ShopDescriptionComponentModule, TopSellersComponentModule,FooterComponentModule],
   declarations: [HomePage],
   providers: [],
   exports: [],

@@ -12,6 +12,7 @@ import { FirebaseHeroServiceModule } from '@hero';
 import { NavigationButtonsComponentModule } from '@navigation';
 import { InMemoryProductStorageModule } from '@product';
 import { InMemoryTopsellerStorageModule } from 'projects/top/src/lib/adapters/secondary/storages/in-memory-topseller.storage-module';
+import { FooterComponentModule } from '@footer';
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,6 +30,7 @@ import { InMemoryTopsellerStorageModule } from 'projects/top/src/lib/adapters/se
     InMemoryProductStorageModule,
     InMemoryTopsellerStorageModule,
     NavigationButtonsComponentModule,
+    FooterComponentModule,
   ],
 
   providers: [],

@@ -32,5 +32,5 @@ export class TopsellersComponent {
     private _getsAllTopsellersDto: GetsAllTopsellersDtoPort,
     @Inject(GETS_ALL_PRODUCT_DTO)
     private _getsAllProductDtoPort: GetsAllProductDtoPort
-  ) {}
+  ) { }
 }
