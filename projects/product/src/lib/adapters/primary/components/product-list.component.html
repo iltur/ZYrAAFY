@@ -14,18 +14,17 @@
         <img
           [routerLink]="'details/' + item.id"
           src="{{ item.imageUrl }}"
-
           class="card-img-top pointer"
-
           style="width: 295px; height: 342px"
-      
-
           alt="..."
         />
         <div class="card-body">
           <h5 class="card-title">{{ item.name }}</h5>
           <p class="card-text">{{ item.price }} zł</p>
         </div>
+        <button (click)="onAddProductToCartClicked(item)">
+          Dodaj do koszyka
+        </button>
         <!-- USUNIĘTO PRZYCISK KUP I IKONKĘ
           <ul class="list-group list-group-flush">
           <li class="list-group-item">

@@ -1,8 +1,7 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  ViewEncapsulation,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, Inject, ViewEncapsulation } from '@angular/core';
+import { Observable } from 'rxjs';
+import { CartDTO } from '../../../application/ports/secondary/dto/cart.dto';
+import { GETS_ALL_CART_DTO, GetsAllCartDtoPort } from '../../../application/ports/secondary/dto/gets-all-cart.dto-port';
 
 @Component({
   selector: 'lib-cart',
@@ -10,4 +9,8 @@ import {
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CartComponent {}
+export class CartComponent {
+  cartProducts$: Observable<CartDTO[]> = this._getsAllCartDto.getAll();
+
+  constructor(@Inject(GETS_ALL_CART_DTO) private _getsAllCartDto: GetsAllCartDtoPort) {}
+}
