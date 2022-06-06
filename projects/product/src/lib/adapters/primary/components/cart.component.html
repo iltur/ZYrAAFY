@@ -5,3 +5,6 @@
   </h1>
 </div>
 <p class="border bg-light w-100"></p>
+<ul>
+  <li *ngFor="let item of cartProducts$ | async">{{ item.name }}</li>
+</ul>
