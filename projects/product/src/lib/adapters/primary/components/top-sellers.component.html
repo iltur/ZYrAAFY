@@ -16,9 +16,13 @@
     <div class="col" *ngFor="let item of topSellers$ | async">
       <div class="text-center border-0" style="width: 16rem">
         <img
+          [routerLink]="'details/' + item.id"
           src="{{ item.imageUrl }}"
+
+          class="card-img-top background productimgs pointer"
+
           style="width: 295px; height: 342px"
-          class="card-img-top background productimgs"
+
         />
         <div class="card-body">
           <h5 class="card-title navtext fw-bold">{{ item.name }}</h5>
