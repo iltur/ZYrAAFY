@@ -1,14 +1,17 @@
 <div class="center container-fluid contactbackgroundpic"></div>
 <br />
-<p class="border bg-light w-100"></p>
-<div class="col herotext">
+
+<div class="col herotext text-center">
   <h1>
     <span class="fw-bold"
       >ANY QUESTIONS? <br />
       DROP US A LINE!</span
     >
   </h1>
-  <p class="border bg-light w-100"></p>
+
+  <br />
+  <br /><br />
+  <br />
   <br />
 </div>
 
@@ -17,7 +20,6 @@
     <div class="container-fluid">
       <div class="col-5">
         <div class="col herotext">
-          <p class="border bg-light w-100"></p>
           <h1>
             <span class="fw-bold"
               ><svg
@@ -35,7 +37,7 @@
               CONTACT FORM</span
             >
           </h1>
-          <p class="border bg-light w-100"></p>
+
           <br />
         </div>
         <form [formGroup]="contact" (ngSubmit)="onMessageSubmited(contact)">
@@ -97,14 +99,10 @@
             Please provide your message
           </div>
           <br /><br />
-          <p class="border bg-light w-100"></p>
 
-          <input
-            type="submit"
-            value="SEND MESSAGE"
-            class="background navtext"
-          />
-          <p class="border bg-light w-100"></p>
+          <input type="submit" value="SEND MESSAGE" class="fw-bold" />
+
+          <br /><br />
           <br /><br />
         </form>
       </div>
