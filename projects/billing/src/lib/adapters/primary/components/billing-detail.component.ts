@@ -40,7 +40,7 @@ export class BillingDetailComponent {
     private router: Router,
     @Inject(ADDS_ORDER_DETAIL_DTO)
     private _addsOrderDetailDto: AddsOrderDetailDtoPort
-  ) {}
+  ) { }
 
   onOrderDetailsSubmited(orderDetail: FormGroup): void {
     if (orderDetail.invalid) {
@@ -85,5 +85,6 @@ export class BillingDetailComponent {
     } else {
       this.emailValidation = false;
     }
+    this.router.navigate(['/confirmation'])
   }
 }
