@@ -3,28 +3,33 @@
     {{ item.name }}{{ item.order | json }}
   </li>
 </ul> -->
-<p class="border bg-light w-100"></p>
+
 <div class="col herotext text-center">
   <h1>
     <span class="fw-bold"> DON'T MISS OUR TOPSELLERS</span>
   </h1>
 </div>
-<p class="border bg-light w-100"></p>
+<br />
 
 <div class="container">
   <div class="row">
     <div class="col" *ngFor="let item of topSellers$ | async">
-      <div class="card background text-white" style="width: 15rem">
+      <div class="text-center border-0" style="width: 16rem">
         <img
           [routerLink]="'details/' + item.id"
           src="{{ item.imageUrl }}"
+
           class="card-img-top background productimgs pointer"
+
+          style="width: 295px; height: 342px"
+
         />
         <div class="card-body">
           <h5 class="card-title navtext fw-bold">{{ item.name }}</h5>
           <p class="card-text navtext">{{ item.price }} zł</p>
 
-          <button class="background navtext" type="button">
+          <!--USUNIĘTO PRZYCISK KUP Z IKONKA
+             <button class="background navtext" type="button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="40"
@@ -39,9 +44,10 @@
               />
             </svg>
             KUP
-          </button>
+          </button> -->
         </div>
       </div>
     </div>
   </div>
 </div>
+<br />

@@ -1,16 +1,17 @@
-<p class="border bg-light w-100"></p>
-<div class="col herotext">
+<div class="col herotext text-center">
   <h1>
     <span class="fw-bold"> EVERY OPINION IS REALLY IMPORTANT TO US</span>
   </h1>
 </div>
-<p class="border bg-light w-100"></p>
+
 <br />
 <div class="container" *ngFor="let item of opinion$ | async">
   <div class="row">
-    <div class="col"><img [src]="item.imageUrl" class="testimg" /></div>
     <div class="col">
-      <h3 class="card-title fw-bold">
+      <img [src]="item.imageUrl" class="rounded-circle border-0" />
+    </div>
+    <div class="col">
+      <h3 class="card-title fw-bold border-0">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="40"
