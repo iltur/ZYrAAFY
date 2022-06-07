@@ -3,8 +3,39 @@
   <h1>
     <span class="fw-bold"> YOUR SHOPPING CART</span>
   </h1>
-</div>
-<p class="border bg-light w-100"></p>
-<ul>
-  <li *ngFor="let item of cartProducts$ | async">{{ item.name }}</li>
-</ul>
+
+
+
+<div class="cart_section">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-lg-10 offset-lg-1">
+              <div class="cart_container">
+                  <div class="cart_title"><small> </small></div>
+                  <div class="cart_items">
+                      <ul class="cart_list">
+                          <li class="cart_item clearfix">
+                              <div class="cart_item_image"><img src="item.imageUrl" alt=""></div>
+                              <div class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
+                                  <div class="cart_item_name cart_info_col">
+                                      <div class="cart_item_title" class="fw-bold">Name</div>
+                                      <div *ngFor="let item of cartProducts$ | async">  {{ item.name }}</div>
+                                  </div>
+                                  
+                                  <div class="cart_item_quantity cart_info_col">
+                                      <div class="cart_item_title"class="fw-bold">Quantity</div>
+                                      <div *ngFor="let item of cartProducts$ | async"> {{item.order}}</div>
+                                  </div>
+                                  <div class="cart_item_price cart_info_col">
+                                      <div class="cart_item_title"class="fw-bold">Price</div>
+                                      <div *ngFor="let item of cartProducts$ | async">  {{item.price}}</div>
+                                  </div>
+                                  <div class="cart_item_total cart_info_col">
+                                      <div class="cart_item_title"class="fw-bold">Total</div>
+                                      <div *ngFor="let item of cartProducts$ | async">  {{ item.price}}</div>
+                                  </div>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+                
