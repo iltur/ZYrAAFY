@@ -1,15 +1,69 @@
-<div *ngIf=" productDetail$ | async as productDetail">
-
-<div class="row justify-content-center">
-  <div class="col-4">
-    <div class="card" style="width: 18rem;">
-        <div class="card-body">
-            <h5 class="card-title">{{productDetail.name}}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{productDetail.description}}</h6>
-            <h6 class="card-subtitle mb-2 text-muted">{{productDetail.price}} zł</h6>
-            <img [src]="productDetail.imageUrl" width="100" height="200">
-            <a href="#" class="card-link">Dodaj do koszyka</a>
-
+<section class="container py-5" *ngIf="productDetail$ | async as productDetail">
+    <div class="card mb-3 border-0">
+      <div class="row">
+        <div class="col">
+          <img
+            [src]="productDetail.imageUrl"
+            class="rounded"
+            style="width: 530px; height: 700px"
+          />
         </div>
-    </div>
-</div>
+
+    <div class="col">
+    <div class="card-body" style="max-width: 450px">
+          <p class="text-uppercase fs-6">
+            home / shop / {{ productDetail.plec }} / <span class="fw-bold">shop</span>
+          </p>
+
+          <!-- tu trzeba zrobić płeć nie jako BOLEAN, tylko string men/woman -->
+
+          <h3 class="card-title fw-bold">{{ productDetail.name }}</h3>
+          <div class="d-flex">
+            <p class="me-3 text-muted text-decoration-line-through">
+                {{productDetail.price}} €
+            </p>
+            <p class="text-primary">{{productDetail.price }} €</p>
+          </div>
+          <p class="card-text">
+            {{productDetail.description}}
+          </p>
+          <div class="dropdown py-3">
+            <button
+              class="btn btn-light dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Choose your size
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item">XS</a></li>
+              <li><a class="dropdown-item">S</a></li>
+              <li><a class="dropdown-item">M</a></li>
+              <li><a class="dropdown-item">L</a></li>
+              <li><a class="dropdown-item">XL</a></li>
+            </ul>
+          </div>
+
+          <div class="btn-group" dropdown>
+            <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+                    aria-controls="dropdown-basic">
+              Button dropdown <span class="caret"></span>
+            </button>
+            <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+                role="menu" aria-labelledby="button-basic">
+              <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
+              <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+    
+        <div class="text-center d-flex justify-content mt-3">
+            <button
+              type="button"
+              class="btn btn-light py-2 px-3 text-uppercase"
+              [routerLink]=""             >
+              Add to cart
+            </button>
+          </div>
