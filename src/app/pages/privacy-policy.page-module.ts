@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { GobackComponentModule } from '@navigation';
+import { PrivacyPolicyComponentModule } from '@docs';
 import { PrivacyPolicyPage } from './privacy-policy.page';
 
 @NgModule({
@@ -12,7 +13,8 @@ import { PrivacyPolicyPage } from './privacy-policy.page';
         component: PrivacyPolicyPage,
       }
     ]),
-    GobackComponentModule
+    GobackComponentModule,
+    PrivacyPolicyComponentModule
   ],
   declarations: [PrivacyPolicyPage],
   providers: [],

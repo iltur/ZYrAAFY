@@ -37,6 +37,34 @@ width: auto;
    background-image: url(https://s3-alpha-sig.figma.com/img/bde2/f2ac/84af301f802bcb9672795b54ce800fb0?Expires=1655683200&Signature=EdOb1OlCzyUrNlctqrgepIJWkZll5c07c5LNWL48W6BERJBwJovoCKJdyczWzt-b-~2lkQka1V~DWT~l0WzXwksuniQkNl~dIyeHi2HGIT2Yz3emWBprqiTqrYGgEzgvuNLRFVeW4graJu1lD6RFYNaqg0bjfRZW4I891dkCYP-w6oYHZqM2iuE0ObSKmToHa97yJp4TC~BxPKQ6y-HGRLBlypHzwZgrQTBqhjyBlf8kjOSLgmQwAhm6wNRY0xRI2JP6j0yKZQ-0qQ5nSIBQ4J5vsaCMfZVnouhZjsq5LTUAVJPs55Lieds55yv94FYu9OuDiPfZxXf6eoaTaVdxRQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA
    );}
 
+.privbackgroundpic { 
+   background-size: cover;
+   background-position:center;
+   height: 468px;
+   background-image: url(https://www.intel.pl/content/dam/www/public/us/en/images/partner-alliance/rwd/digital-security-hand-typing-rwd.jpg.rendition.intel.web.864.486.jpg);
+}
+
+.termbackgroundpic {
+   background-size: cover;
+   background-position: center;
+   height: 468px;
+   background-image: url(https://www.basecampstudent.com/wp-content/uploads/2020/08/hero-terms.jpg);
+}
+
+.doctextstyle {
+   font-family: sans-serif;
+   font-size: 20px;
+   font-style: normal;
+   line-height: 30px;
+   font-weight: normal;
+   text-align: justify;
+   margin-top: 100px;
+   margin-bottom: 10px;
+   margin-right: 1100px;
+   margin-left: 100px;
+   
+}
+
 .buttonblue{
    background-color: #024E82;
    width: 192px;
