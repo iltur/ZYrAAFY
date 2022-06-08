@@ -11,6 +11,8 @@ import { BillingDetailPageModule } from './pages/billing-detail.page-module';
 import { SendConfirmationPageModule } from './pages/send-confirmation.page-module';
 import { WomanPageModule } from './pages/woman.page-module';
 import { ManPageModule } from './pages/man.page-module';
+import { TermsPageModule } from './pages/terms.page-module';
+import { PrivacyPolicyPageModule } from './pages/privacy-policy.page-module';
 
 const routes: Routes = [{
   path: 'home',
@@ -52,14 +54,22 @@ const routes: Routes = [{
   path: 'messagesent',
   loadChildren: () => SendConfirmationPageModule
 },
-  { 
-        path: 'woman', 
-        loadChildren: () => WomanPageModule
-      },
-  { 
-        path: 'man', 
-        loadChildren: () => ManPageModule
-      }
+{
+  path: 'woman',
+  loadChildren: () => WomanPageModule
+},
+{
+  path: 'man',
+  loadChildren: () => ManPageModule
+},
+{
+  path: 'terms',
+  loadChildren: () => TermsPageModule
+},
+{
+  path: 'privacy',
+  loadChildren: () => PrivacyPolicyPageModule
+}
 ];
 
 @NgModule({
