@@ -32,10 +32,15 @@
                                   </div>
                                   <div class="cart_item_total cart_info_col">
                                       <div class="cart_item_title"class="fw-bold">Total</div>
-                                      <div *ngFor="let item of cartProducts$ | async">  {{ item.price}}</div>
+                                      <div *ngFor="let item of cartProducts$ | async">  {{ item.price}}
+                              
+                                    <span  class="badge bg-primary rounded-pill"> <button (click)="onDeleteTasked(item.id)" type="button" class="btn btn-primary"
+                                      data-bs-toggle="modal" data-bs-target="#exampleMOdal">
+                                      Delete
+                                  </button></span>
                                   </div>
                               </div>
-                          </li>
-                      </ul>
+                        
+              
                   </div>
                 
