@@ -8,35 +8,25 @@
 
 
 
-// .mainheading {
-//    font-family: Arial, Helvetica, sans-serif;
-//    font-style: normal;
-//    color: white;
-//    size: 120px;
-//    padding-top: 50px;
-//    padding-bottom: 20px;
-//    line-height: 60px;
-//    text-align: center;
-//    text-transform: uppercase;
-// }
+.heading{
+font-family: sans-serif;
+font-size: 48px;
+font-style: normal;
+line-height: 48px;
+font-weight: bolder;
+padding-top: 350px;
+padding-left: 50px;
 
-// .scbackground {
-//    height: 650px;
-//    width: 100%;
-//    background-size: cover;
-//    background-image: url(https://t4.ftcdn.net/jpg/02/11/54/39/240_F_211543946_Dv89GzbKVLyotp9dNM2Gx7bYGnBFR8jU.jpg
-      
-//    );
-// }
+}
 
-// .contactbackgroundpic {
-//    height: 250px;
-//    width: 100%;
-//    background-size:cover;
-//    background-position: bottom;
-//    background-image: url(https://t4.ftcdn.net/jpg/02/90/37/73/240_F_290377366_Ma5x0kvxFVSESfDPv4rg0wRinKYNY4mk.jpg
-// );
-// }
+.contactbackgroundpic {
+background-size: cover;
+background-position:center;
+height: 468px;
+width: auto;
+   background-image: url(https://s3-alpha-sig.figma.com/img/98cf/944a/401ee6dd7cb8b32f35703f88f482980a?Expires=1655683200&Signature=X0CqapYKFexW4CsPzfcJETrHDebSd8Hqpo~ykaouI73apGlcCQOtpaqC-QoBO~9B3eTRW3wU5LJlLeVB3bE1JjK0MoY0e1vHTntRpbT195qRX9c04E4E7VP5FKXPytHa92e4MKjpdyR~vnJxYSDj~R2whUnOGzEueUULrRMDmI0t9Mdjash3oxIkFauunX8rbiCNlGaE1gNmozhSNWuXjU2M7xriV6M23JLTcEKpwKcj1L~jsfraDvRqoo0ibDjpn7L-zuc484W5usXAWRw~penWxCYENzjw8XUHrGQa~bSLaVdLH66fvJVcw8KcHBkNUgTHGlS~ktuHWI~JdE2oCw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA
+);
+}
 
 .aboutbackgroundpic {
 background-size: cover;
@@ -47,7 +37,11 @@ width: auto;
    background-image: url(https://s3-alpha-sig.figma.com/img/bde2/f2ac/84af301f802bcb9672795b54ce800fb0?Expires=1655683200&Signature=EdOb1OlCzyUrNlctqrgepIJWkZll5c07c5LNWL48W6BERJBwJovoCKJdyczWzt-b-~2lkQka1V~DWT~l0WzXwksuniQkNl~dIyeHi2HGIT2Yz3emWBprqiTqrYGgEzgvuNLRFVeW4graJu1lD6RFYNaqg0bjfRZW4I891dkCYP-w6oYHZqM2iuE0ObSKmToHa97yJp4TC~BxPKQ6y-HGRLBlypHzwZgrQTBqhjyBlf8kjOSLgmQwAhm6wNRY0xRI2JP6j0yKZQ-0qQ5nSIBQ4J5vsaCMfZVnouhZjsq5LTUAVJPs55Lieds55yv94FYu9OuDiPfZxXf6eoaTaVdxRQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA
    );}
 
-
+.buttonblue{
+   background-color: #024E82;
+   width: 192px;
+   height: 58px;
+}
 
 // .navtext {
 //    font-family: Arial, Helvetica, sans-serif;
