@@ -10,3 +10,4 @@ export * from './lib/adapters/primary/components/top-sellers.component-module';
 export * from './lib/adapters/primary/components/woman.component-module';
 export * from './lib/adapters/primary/components/man.component-module';
 export * from './lib/adapters/secondary/services/firebase-cart.service-module';
+export * from './lib/adapters/primary/components/bargains.component-module';
