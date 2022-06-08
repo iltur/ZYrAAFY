@@ -1,47 +1,61 @@
-<div class="container px-6">
-  <div class="row gx-5 justify content: space-between">
-    <div class="col">
-      <div class="p-3 border-0">
-        <img
-          [routerLink]="'/man'"
-          src="https://trendy.allani.pl/wp-content/uploads/2017/02/New-York-m-str-F17-012.jpg"
-          width="300"
-          height="400"
-          class="img-fluid"
-        /><br />MAN
+<div class="aboutbackgroundpic"></div>
+<br />
+<div class="col text-center">
+  <br />
+  <h1>
+    <span class="fw-bold"> OUR COLLECTIONS</span>
+  </h1>
+  <div class="container px-6">
+    <div class="row gx-5 justify content: space-between">
+      <div class="col">
+        <div class="p-3 border-0">
+          <img
+            [routerLink]="'/man'"
+            src="https://trendy.allani.pl/wp-content/uploads/2017/02/New-York-m-str-F17-012.jpg"
+            width="300"
+            height="400"
+            class="img-fluid"
+          /><br />
+          <h3>
+            <span class="fw-bold"> MAN</span>
+          </h3>
+        </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="p-3 border-0">
-        <img
-          [routerLink]="'/woman'"
-          src="https://assets.candytm.pl/thumbs/fit-667x1000/2020-03::1583916097-85188476-592714084903038-7017065526086074368-o.jpg"
-          width="300"
-          height="500"
-          class="img-fluid"
-        /><br />WOMAN
+      <div class="col">
+        <div class="p-3 border-0">
+          <img
+            [routerLink]="'/woman'"
+            src="https://assets.candytm.pl/thumbs/fit-667x1000/2020-03::1583916097-85188476-592714084903038-7017065526086074368-o.jpg"
+            width="300"
+            height="500"
+            class="img-fluid"
+          /><br />
+          <h3>
+            <span class="fw-bold"> WOMAN</span>
+          </h3>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<br />
-
-<div class="col herotext text-center">
   <br />
-  <h1>
-    <span class="fw-bold"> FOUNDERS</span>
-  </h1>
 
-  <br />
-</div>
-<div class="center container background">
-  <div class="row">
-    <div class="col-md" *ngFor="let item of team$ | async">
-      <div class="card background border-0" style="width: 25rem">
-        <img [src]="item.imageUrl" style="height: 500px; width: 400px" />
-        <div class="card-body background containertext">
-          <h3 class="card-title fw-bold">{{ item.name }}<br /></h3>
-          <h4 class="card-title fw-bold">{{ item.description }}<br /></h4>
+  <div class="col text-center">
+    <br />
+    <h1>
+      <span class="fw-bold"> FOUNDERS</span>
+    </h1>
+
+    <br />
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md" *ngFor="let item of team$ | async">
+        <div class="card border-0" style="width: 25rem">
+          <img [src]="item.imageUrl" style="height: 500px; width: 400px" />
+          <div class="card-body containertext">
+            <h3 class="card-title fw-bold">{{ item.name }}<br /></h3>
+            <h4 class="card-title fw-bold">{{ item.description }}<br /></h4>
+          </div>
         </div>
       </div>
     </div>

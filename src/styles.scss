@@ -6,9 +6,7 @@
 /* Importing Datepicker SCSS file. */
 @import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
 
-// .background {
-//    background-color: #4c35e2;
-// }
+
 
 // .mainheading {
 //    font-family: Arial, Helvetica, sans-serif;
@@ -40,23 +38,16 @@
 // );
 // }
 
-// .aboutbackgroundpic {
-// height: 350px;
-// width: 100%;
-// background-size: cover;
-// background-position: bottom;
-//    background-image: url(https://t4.ftcdn.net/jpg/03/02/23/57/240_F_302235762_xl56pLHpu5C3axGy4CYODQjKZPupqbXe.jpg
-//    );}
+.aboutbackgroundpic {
+background-size: cover;
+background-position:center;
+height: 468px;
+width: auto;
 
-// .herotext {
-//    font-family: Arial, Helvetica, sans-serif;
-//    font-style: normal;
-//    color: white;
-//    size: 48px;
-//    line-height: 48px;
-//    text-align: center;
-//    text-transform: uppercase;
-// }
+   background-image: url(https://s3-alpha-sig.figma.com/img/bde2/f2ac/84af301f802bcb9672795b54ce800fb0?Expires=1655683200&Signature=EdOb1OlCzyUrNlctqrgepIJWkZll5c07c5LNWL48W6BERJBwJovoCKJdyczWzt-b-~2lkQka1V~DWT~l0WzXwksuniQkNl~dIyeHi2HGIT2Yz3emWBprqiTqrYGgEzgvuNLRFVeW4graJu1lD6RFYNaqg0bjfRZW4I891dkCYP-w6oYHZqM2iuE0ObSKmToHa97yJp4TC~BxPKQ6y-HGRLBlypHzwZgrQTBqhjyBlf8kjOSLgmQwAhm6wNRY0xRI2JP6j0yKZQ-0qQ5nSIBQ4J5vsaCMfZVnouhZjsq5LTUAVJPs55Lieds55yv94FYu9OuDiPfZxXf6eoaTaVdxRQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA
+   );}
+
+
 
 // .navtext {
 //    font-family: Arial, Helvetica, sans-serif;
@@ -108,12 +99,12 @@
 //    height: 188px
 //  }
 
-// .containertext {
-//    font-family: Arial,Helvetica,sans-serif;
-//    color: white; 
-//    text-align: justify;
+.containertext {
+   font-family: Arial,Helvetica,sans-serif;
+   color: black; 
+   text-align: justify;
 
-// }
+}
 
 .pointer{
    cursor: pointer;
