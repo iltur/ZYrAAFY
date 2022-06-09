@@ -1,46 +1,103 @@
-<p class="border bg-light w-100"></p>
+<!-- <div></div>
+<p class="border bg-light w-100 ms-2"></p> -->
 <div class="col herotext">
   <h1>
     <span class="fw-bold"> YOUR SHOPPING CART</span>
   </h1>
 
+  <div class="container">
+    <div class="row align-items-start fw-bold">
+      <div class="col-2"></div>
+      <div class="col">Product</div>
+      <div class="col">Price</div>
+      <div class="col">Qantity</div>
+      <div class="col">Total</div>
+    </div>
+  </div>
 
+  <hr class="bg-dark border-2 border-dark mx-5 mb-0" />
 
-<div class="cart_section">
-  <div class="container-fluid">
+  <ul class="ps-0 list-group list-group-flush">
+    <li
+      class="list-unstyled list-group-item mx-5"
+      *ngFor="let item of cartProducts$ | async"
+    >
+      <div class="container">
+        <div class="row align-items-start">
+          <div
+            class="col-2 text-center text-muted pointer"
+            (click)="onDeleteTasked(item.id)"
+          >
+            X
+          </div>
+          <div class="col">{{ item.name }}</div>
+          <div class="col">{{ item.price }}</div>
+          <div class="col">{{ item.quantity }}</div>
+          <div class="col">{{ item.price }}</div>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <!-- <div class="cart_section">
+    <div class="container-fluid">
       <div class="row">
-          <div class="col-lg-10 offset-lg-1">
-              <div class="cart_container">
-                  <div class="cart_title"><small> </small></div>
-                  <div class="cart_items">
-                      <ul class="cart_list">
-                          <li class="cart_item clearfix">
-                              <div class="cart_item_image"><img src="item.imageUrl" alt=""></div>
-                              <div class="cart_item_info d-flex flex-md-row flex-column justify-content-between">
-                                  <div class="cart_item_name cart_info_col">
-                                      <div class="cart_item_title" class="fw-bold">Name</div>
-                                      <div *ngFor="let item of cartProducts$ | async">  {{ item.name }}</div>
-                                  </div>
-                                  
-                                  <div class="cart_item_quantity cart_info_col">
-                                      <div class="cart_item_title"class="fw-bold">Quantity</div>
-                                      <div *ngFor="let item of cartProducts$ | async"> {{item.order}}</div>
-                                  </div>
-                                  <div class="cart_item_price cart_info_col">
-                                      <div class="cart_item_title"class="fw-bold">Price</div>
-                                      <div *ngFor="let item of cartProducts$ | async">  {{item.price}}</div>
-                                  </div>
-                                  <div class="cart_item_total cart_info_col">
-                                      <div class="cart_item_title"class="fw-bold">Total</div>
-                                      <div *ngFor="let item of cartProducts$ | async">  {{ item.price}}
-                              
-                                    <span  class="badge bg-primary rounded-pill"> <button (click)="onDeleteTasked(item.id)" type="button" class="btn btn-primary"
-                                      data-bs-toggle="modal" data-bs-target="#exampleMOdal">
-                                      Delete
-                                  </button></span>
-                                  </div>
-                              </div>
-                        
-              
+        <div class="col-lg-10 offset-lg-1">
+          <div class="cart_container">
+            <div class="cart_title"><small> </small></div>
+            <div class="cart_items">
+              <ul class="cart_list">
+                <li class="cart_item clearfix list-unstyled">
+                  <div class="cart_item_image">
+                    <img src="item.imageUrl" alt="" />
                   </div>
-                
+                  <div
+                    class="cart_item_info d-flex flex-md-row flex-column justify-content-between"
+                  >
+                    <div class="cart_item_name cart_info_col">
+                      <button
+                        (click)="onDeleteTasked(item.id)"
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleMOdal"
+                      >
+                        Delete
+                      </button>
+                      <div class="cart_item_title" class="fw-bold">Name</div>
+                      <div></div>
+                    </div>
+
+                    <div class="cart_item_quantity cart_info_col">
+                      <div class="cart_item_title" class="fw-bold">
+                        Quantity
+                      </div>
+
+                      <div *ngFor="let item of cartProducts$ | async">
+                        {{ item.quantity }}
+                      </div>
+                    </div>
+                    <div class="cart_item_price cart_info_col">
+                      <div class="cart_item_title" class="fw-bold">Price</div>
+                      <div *ngFor="let item of cartProducts$ | async">
+                        {{ item.price }}
+                      </div>
+                    </div>
+                    <div class="cart_item_total cart_info_col">
+                      <div class="cart_item_title" class="fw-bold">Total</div>
+                      <div *ngFor="let item of cartProducts$ | async">
+                        {{ item.price }}
+
+                        <span class="badge bg-primary rounded-pill"> </span>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</div>
