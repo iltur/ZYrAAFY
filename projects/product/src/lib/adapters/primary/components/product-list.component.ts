@@ -4,8 +4,10 @@ import {
   Inject,
   ViewEncapsulation,
 } from '@angular/core';
-import { Observable } from 'rxjs';
+import { FormControl, FormGroup } from '@angular/forms';
+import { map, Observable } from 'rxjs';
 import { ProductDTO } from '../../../application/ports/secondary/dto/product.dto';
+import { CartDTO } from '../../../application/ports/secondary/dto/cart.dto';
 import {
   GETS_ALL_PRODUCT_DTO,
   GetsAllProductDtoPort,
@@ -14,7 +16,10 @@ import {
   ADDS_CART_DTO,
   AddsCartDtoPort,
 } from '../../../application/ports/secondary/dto/adds-cart.dto-port';
-import { isNgTemplate } from '@angular/compiler';
+import {
+  GETS_ALL_CART_DTO,
+  GetsAllCartDtoPort,
+} from '../../../application/ports/secondary/dto/gets-all-cart.dto-port';
 
 @Component({
   selector: 'lib-product-list',
@@ -24,15 +29,22 @@ import { isNgTemplate } from '@angular/compiler';
 })
 export class ProductListComponent {
   products$: Observable<ProductDTO[]> = this._getsAllProductDto.getAll();
+  readonly quantity: FormGroup = new FormGroup({ quantity: new FormControl() });
+  cart$: Observable<CartDTO[]> = this._getsAllCartDto.getAll();
+  cartTotal$: Observable<any> = this.cart$.pipe(
+    map((cartTotal) => {
+      return console.log(cartTotal);
+    })
+  );
 
   constructor(
     @Inject(GETS_ALL_PRODUCT_DTO)
     private _getsAllProductDto: GetsAllProductDtoPort,
-    @Inject(ADDS_CART_DTO) private _addsCartDto: AddsCartDtoPort
+    @Inject(ADDS_CART_DTO) private _addsCartDto: AddsCartDtoPort,
+    @Inject(GETS_ALL_CART_DTO) private _getsAllCartDto: GetsAllCartDtoPort
   ) {}
 
-  onAddProductToCartClicked(product: ProductDTO): void {
-    console.log(product);
+  onAddProductToCartClicked(product: ProductDTO, quantity: FormGroup): void {
     this._addsCartDto
       .add({
         name: product.name,
@@ -41,6 +53,7 @@ export class ProductListComponent {
         order: product.order,
         plec: product.plec,
         price: product.price,
+        quantity: quantity.get('quantity')?.value,
       })
       .subscribe();
   }

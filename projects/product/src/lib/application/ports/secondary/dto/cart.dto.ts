@@ -6,4 +6,6 @@ export interface CartDTO {
   readonly description: string;
   readonly order: number;
   readonly plec: boolean;
+  readonly quantity: string;
+  readonly total: string;
 }

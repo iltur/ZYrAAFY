@@ -349,6 +349,22 @@
           }
         }
       }
+    },
+    "cart": {
+      "projectType": "library",
+      "root": "projects/cart",
+      "sourceRoot": "projects/cart/src",
+      "prefix": "lib",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/cart"],
+          "options": {
+            "jestConfig": "projects/cart/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   },
   "defaultProject": "HACKATON"

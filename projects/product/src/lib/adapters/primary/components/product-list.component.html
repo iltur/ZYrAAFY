@@ -22,7 +22,18 @@
           <h5 class="card-title">{{ item.name }}</h5>
           <p class="card-text">{{ item.price }} €</p>
         </div>
-        <button (click)="onAddProductToCartClicked(item)">Add to cart</button>
+        <form [formGroup]="quantity">
+          <input
+            type="text"
+            value="1"
+            formControlName="quantity"
+            placeholder="Quantity"
+          />
+          <button (click)="onAddProductToCartClicked(item, quantity)">
+            Add to cart
+          </button>
+        </form>
+
         <!-- USUNIĘTO PRZYCISK KUP I IKONKĘ
           <ul class="list-group list-group-flush">
           <li class="list-group-item">
