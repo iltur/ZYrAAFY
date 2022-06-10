@@ -76,11 +76,23 @@
             </ul>
           </div>
 
-          <div class="text-center d-flex justify-content mt-3">
-            <button type="button" class="buttonblue text-white" [routerLink]="">
-              Add to cart
-            </button>
-          </div>
+          <form [formGroup]="quantity">
+            <input
+              type="text"
+              value="1"
+              formControlName="quantity"
+              placeholder="Quantity"
+            />
+            <div class="text-center d-flex justify-content mt-3">
+              <button
+                type="button"
+                class="buttonblue text-white"
+                (click)="onAddProductToCartClicked(productDetail, quantity)"
+              >
+                Add to cart
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
