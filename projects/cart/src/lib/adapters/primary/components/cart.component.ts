@@ -15,6 +15,10 @@ import {
   REMOVES_CART_DTO,
   RemovesCartDtoPort,
 } from '../../../application/ports/secondary/dto/removes-cart.dto-port';
+import {
+  SETS_CART_DTO,
+  SetsCartDtoPort,
+} from '../../../application/ports/secondary/dto/sets-cart.dto-port';
 
 @Component({
   selector: 'lib-cart',
@@ -24,12 +28,29 @@ import {
 })
 export class CartComponent {
   cartProducts$: Observable<CartDTO[]> = this._getsAllCartDto.getAll();
-  readonly quantity: FormGroup = new FormGroup({ quantity: new FormControl() });
+
+  readonly setQuantity: FormGroup = new FormGroup({
+    quantity: new FormControl(),
+  });
+
   constructor(
     @Inject(GETS_ALL_CART_DTO) private _getsAllCartDto: GetsAllCartDtoPort,
-    @Inject(REMOVES_CART_DTO) private _removesCartDto: RemovesCartDtoPort
+    @Inject(REMOVES_CART_DTO) private _removesCartDto: RemovesCartDtoPort,
+    @Inject(SETS_CART_DTO) private _setsCartDto: SetsCartDtoPort
   ) {}
   onDeleteTasked(Id: string): void {
     this._removesCartDto.remove(Id);
+  }
+
+  UpperButton(cartProduct: { quantity: number }) {
+    console.log(cartProduct);
+    cartProduct.quantity++;
+  }
+
+  LowerButton(cartProduct: { quantity: number }) {
+    console.log(cartProduct);
+    if (cartProduct.quantity != 1) {
+      cartProduct.quantity--;
+    }
   }
 }

@@ -29,9 +29,25 @@
             X
           </div>
           <div class="col">{{ item.name }}</div>
-          <div class="col">{{ item.price }}</div>
-          <div class="col">{{ item.quantity }}</div>
-          <div class="col">{{ item.price }}</div>
+          <div class="col">{{ item.price }}$</div>
+          <div class="col">
+            <button (click)="LowerButton(item)">-</button>
+            <input
+              class="text-center"
+              value="{{ item.quantity }}"
+              style="width: 40px"
+            />
+            <!-- <form [formGroup]="setQuantity">
+              <input
+                type="text"
+                formControlName="quantity"
+                placeholder="Quantity"
+              /><input type="submit" value="Submit" />
+            </form> -->
+
+            <button (click)="UpperButton(item)">+</button>
+          </div>
+          <div class="col">{{ item.price * item.quantity }}$</div>
         </div>
       </div>
     </li>
