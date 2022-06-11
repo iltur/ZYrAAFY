@@ -7,5 +7,5 @@ export interface ProductDTO {
   readonly order: number;
   readonly total: string;
   readonly plec: boolean;
-  readonly quantity: string;
+  readonly quantity: number;
 }
