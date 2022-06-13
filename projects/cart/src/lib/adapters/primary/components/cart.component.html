@@ -3,6 +3,7 @@
     <span class="fw-bold"> YOUR SHOPPING CART</span>
   </h1>
 
+
   <div class="container">
     <div class="row align-items-start fw-bold">
       <div class="col-2"></div>
@@ -24,7 +25,7 @@
         <div class="row align-items-start">
           <div
             class="col-2 text-center text-muted pointer"
-            (click)="onDeleteTasked(item.id)"
+            (click)="onDeleteProduct(item.id)"
           >
             X
           </div>
@@ -53,3 +54,13 @@
     </li>
   </ul>
 </div>
+
+<tr>
+<td colspan="4"></td>
+
+<td><button routerLink="" class="btn btn-warning">Shop More</button></td>
+<td><button class="btn btn-success">Clear All</button></td>
+
+<td>
+</td>
+</tr>

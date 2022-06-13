@@ -1,24 +1,10 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  Inject,
-  ViewEncapsulation,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, Inject, ViewEncapsulation } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { CartDTO } from '../../../application/ports/secondary/dto/cart.dto';
-import {
-  GETS_ALL_CART_DTO,
-  GetsAllCartDtoPort,
-} from '../../../application/ports/secondary/dto/gets-all-cart.dto-port';
-import {
-  REMOVES_CART_DTO,
-  RemovesCartDtoPort,
-} from '../../../application/ports/secondary/dto/removes-cart.dto-port';
-import {
-  SETS_CART_DTO,
-  SetsCartDtoPort,
-} from '../../../application/ports/secondary/dto/sets-cart.dto-port';
+import { GETS_ALL_CART_DTO, GetsAllCartDtoPort } from '../../../application/ports/secondary/dto/gets-all-cart.dto-port';
+import { REMOVES_CART_DTO, RemovesCartDtoPort } from '../../../application/ports/secondary/dto/removes-cart.dto-port';
+import { SETS_CART_DTO, SetsCartDtoPort } from '../../../application/ports/secondary/dto/sets-cart.dto-port';
 
 @Component({
   selector: 'lib-cart',
@@ -38,7 +24,12 @@ export class CartComponent {
     @Inject(REMOVES_CART_DTO) private _removesCartDto: RemovesCartDtoPort,
     @Inject(SETS_CART_DTO) private _setsCartDto: SetsCartDtoPort
   ) {}
-  onDeleteTasked(Id: string): void {
+  
+
+
+
+
+  onDeleteProduct(Id: string): void {
     this._removesCartDto.remove(Id);
   }
 
@@ -52,5 +43,5 @@ export class CartComponent {
     if (cartProduct.quantity != 1) {
       cartProduct.quantity--;
     }
-  }
-}
+  }}
+  
