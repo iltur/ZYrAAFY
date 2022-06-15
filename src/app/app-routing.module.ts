@@ -13,6 +13,7 @@ import { WomanPageModule } from './pages/woman.page-module';
 import { ManPageModule } from './pages/man.page-module';
 import { TermsPageModule } from './pages/terms.page-module';
 import { PrivacyPolicyPageModule } from './pages/privacy-policy.page-module';
+import { SpecialOffersPageModule } from './pages/special-offers.page-module';
 
 const routes: Routes = [{
   path: 'home',
@@ -69,6 +70,10 @@ const routes: Routes = [{
 {
   path: 'privacy',
   loadChildren: () => PrivacyPolicyPageModule
+},
+{
+  path: 'special-offers',
+  loadChildren: () => SpecialOffersPageModule
 }
 ];
 

@@ -3,7 +3,7 @@
 <body>
   <div class="content"></div>
   <footer class="footer text-center border-0">
-    <table class="table table-borderless ">
+    <table class="table table-borderless">
       <thead>
         <tr>
           <th scope="col">COMPANY INFO</th>
@@ -14,9 +14,23 @@
       </thead>
       <tbody>
         <tr>
-          <td>About Us</td>
+          <td>
+            <a
+              class="navbar-brand p-2 me-0 fs-6"
+              style="color: black"
+              [routerLink]="'./aboutus'"
+              >About us</a
+            >
+          </td>
           <td>Tracking</td>
-          <td>Special Offers</td>
+          <td>
+            <a
+              class="navbar-brand p-2 me-0 fs-6"
+              style="color: black"
+              [routerLink]="'./special-offers'"
+              >Special Offers</a
+            >
+          </td>
           <td>Enter E-mail</td>
         </tr>
         <tr>
@@ -25,14 +39,35 @@
           <td>Gift Cards</td>
         </tr>
         <tr>
-          <td>Contact Us</td>
+          <td>
+            <a
+              class="navbar-brand p-2 me-0 fs-6"
+              style="color: black"
+              [routerLink]="'./contactus'"
+              >Contact Us</a
+            >
+          </td>
           <td>Delivery</td>
           <td>Advetising</td>
         </tr>
         <tr>
-          <td>Shop</td>
+          <td>
+            <a
+              class="navbar-brand p-2 me-0 fs-6"
+              style="color: black"
+              [routerLink]="'./'"
+              >Shop</a
+            >
+          </td>
           <td>Shipping Info</td>
-          <td>Terms of Use</td>
+          <td>
+            <a
+              class="navbar-brand p-2 me-0 fs-6"
+              style="color: black"
+              [routerLink]="'./terms'"
+              >Terms of Use</a
+            >
+          </td>
         </tr>
         <tr>
           <td></td>
