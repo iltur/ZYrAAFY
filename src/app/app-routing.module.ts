@@ -14,6 +14,7 @@ import { ManPageModule } from './pages/man.page-module';
 import { TermsPageModule } from './pages/terms.page-module';
 import { PrivacyPolicyPageModule } from './pages/privacy-policy.page-module';
 import { SpecialOffersPageModule } from './pages/special-offers.page-module';
+import { DeliveryPageModule } from './pages/delivery.page-module';
 
 const routes: Routes = [{
   path: 'home',
@@ -74,6 +75,10 @@ const routes: Routes = [{
 {
   path: 'special-offers',
   loadChildren: () => SpecialOffersPageModule
+},
+{
+  path: 'delivery',
+  loadChildren: () => DeliveryPageModule
 }
 ];
 
