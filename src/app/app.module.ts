@@ -13,6 +13,7 @@ import { NavigationButtonsComponentModule } from '@navigation';
 import { InMemoryProductStorageModule } from '@product';
 import { InMemoryTopsellerStorageModule } from 'projects/top/src/lib/adapters/secondary/storages/in-memory-topseller.storage-module';
 import { FooterComponentModule } from '@footer';
+import { FirebaseNewsletterServiceModule } from 'projects/footer/src/lib/adapters/secondary/services/firebase-newsletter.service-module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -30,10 +31,10 @@ import { FooterComponentModule } from '@footer';
     InMemoryProductStorageModule,
     InMemoryTopsellerStorageModule,
     NavigationButtonsComponentModule,
-    FooterComponentModule,
+    FooterComponentModule, FirebaseNewsletterServiceModule
   ],
 
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

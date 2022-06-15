@@ -38,7 +38,7 @@
               >Special Offers</a
             >
           </td>
-          <td>Enter E-mail</td>
+          <td>Sing up for our newsletter!</td>
         </tr>
         <tr>
           <td>
@@ -64,6 +64,18 @@
               [routerLink]="'./terms'"
               >Gift Cards</a
             >
+          </td>
+          <td>
+            <form
+              [formGroup]="newsletter"
+              (ngSubmit)="onNewsletterSubmited(newsletter)"
+            >
+              <input
+                type="text"
+                formControlName="email"
+                placeholder="Email"
+              /><input class="" type="submit" value="Sign up!" />
+            </form>
           </td>
         </tr>
         <tr>
